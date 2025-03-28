@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApplication_HibaVonal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe358b8baa645588f754d10622a0d082bb75882d")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApplication_HibaVonal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApplication_HibaVonal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

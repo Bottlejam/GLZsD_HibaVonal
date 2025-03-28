@@ -37,6 +37,7 @@ namespace WebApplication_HibaVonal
             app.MapControllers();
 
             app.Run();
+            
         }
     }
 }

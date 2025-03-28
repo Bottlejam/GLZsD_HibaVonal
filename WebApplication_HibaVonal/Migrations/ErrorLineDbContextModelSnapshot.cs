@@ -22,7 +22,7 @@ namespace WebApplication_HibaVonal.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebApplication_HibaVonal.Equipment", b =>
+            modelBuilder.Entity("Equipment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,17 +32,20 @@ namespace WebApplication_HibaVonal.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("Stock")
+                    b.Property<int?>("RoomId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Equipment");
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("Equipments");
                 });
 
-            modelBuilder.Entity("WebApplication_HibaVonal.IssueReport", b =>
+            modelBuilder.Entity("Issue", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,42 +53,58 @@ namespace WebApplication_HibaVonal.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Date")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("RoomId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoomId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Issues");
+                });
+
+            modelBuilder.Entity("MaintenanceRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AssignedTo")
+                        .HasColumnType("int");
+
                     b.Property<int>("IssueId")
                         .HasColumnType("int");
 
-                    b.Property<int>("LocationId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ReporterId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<int>("WorkerId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("AssignedTo");
 
                     b.HasIndex("IssueId");
 
-                    b.HasIndex("LocationId");
-
-                    b.HasIndex("ReporterId");
-
-                    b.HasIndex("WorkerId");
-
-                    b.ToTable("IssueReports");
+                    b.ToTable("MaintenanceRequests");
                 });
 
-            modelBuilder.Entity("WebApplication_HibaVonal.IssueType", b =>
+            modelBuilder.Entity("Room", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,87 +114,15 @@ namespace WebApplication_HibaVonal.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("IssueTypes");
+                    b.ToTable("Rooms");
                 });
 
-            modelBuilder.Entity("WebApplication_HibaVonal.Location", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Locations");
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.Order", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateOnly>("ArrivalDate")
-                        .HasColumnType("date");
-
-                    b.Property<int>("ManagerId")
-                        .HasColumnType("int");
-
-                    b.Property<DateOnly>("OrderDate")
-                        .HasColumnType("date");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ManagerId");
-
-                    b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.OrderEquipmentItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("EquipmentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EquipmentId");
-
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("OrderEquipmentItems");
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.User", b =>
+            modelBuilder.Entity("WebApplication_HibaVonal.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -185,192 +132,76 @@ namespace WebApplication_HibaVonal.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.UseTptMappingStrategy();
                 });
 
-            modelBuilder.Entity("WebApplication_HibaVonal.Admin", b =>
+            modelBuilder.Entity("Equipment", b =>
                 {
-                    b.HasBaseType("WebApplication_HibaVonal.User");
-
-                    b.ToTable("Admins", (string)null);
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.MaintananceManager", b =>
-                {
-                    b.HasBaseType("WebApplication_HibaVonal.User");
-
-                    b.ToTable("MaintananceManagers", (string)null);
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.MaintananceWorker", b =>
-                {
-                    b.HasBaseType("WebApplication_HibaVonal.User");
-
-                    b.ToTable("MaintananceWorkers", (string)null);
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.Student", b =>
-                {
-                    b.HasBaseType("WebApplication_HibaVonal.User");
-
-                    b.Property<int>("RoomId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("RoomId");
-
-                    b.ToTable("Students", (string)null);
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.IssueReport", b =>
-                {
-                    b.HasOne("WebApplication_HibaVonal.IssueType", "IssueType")
-                        .WithMany("Reports")
-                        .HasForeignKey("IssueId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebApplication_HibaVonal.Location", "Location")
-                        .WithMany("Reports")
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebApplication_HibaVonal.Student", "Reporter")
-                        .WithMany("Reports")
-                        .HasForeignKey("ReporterId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebApplication_HibaVonal.MaintananceWorker", "MaintananceWorker")
-                        .WithMany("AssignedReports")
-                        .HasForeignKey("WorkerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("IssueType");
-
-                    b.Navigation("Location");
-
-                    b.Navigation("MaintananceWorker");
-
-                    b.Navigation("Reporter");
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.Order", b =>
-                {
-                    b.HasOne("WebApplication_HibaVonal.MaintananceManager", "Manager")
-                        .WithMany("Orders")
-                        .HasForeignKey("ManagerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Manager");
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.OrderEquipmentItem", b =>
-                {
-                    b.HasOne("WebApplication_HibaVonal.Equipment", "Equipment")
+                    b.HasOne("Room", "Room")
                         .WithMany()
-                        .HasForeignKey("EquipmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebApplication_HibaVonal.Order", "Order")
-                        .WithMany("OrderItems")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Equipment");
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.Admin", b =>
-                {
-                    b.HasOne("WebApplication_HibaVonal.User", null)
-                        .WithOne()
-                        .HasForeignKey("WebApplication_HibaVonal.Admin", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.MaintananceManager", b =>
-                {
-                    b.HasOne("WebApplication_HibaVonal.User", null)
-                        .WithOne()
-                        .HasForeignKey("WebApplication_HibaVonal.MaintananceManager", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.MaintananceWorker", b =>
-                {
-                    b.HasOne("WebApplication_HibaVonal.User", null)
-                        .WithOne()
-                        .HasForeignKey("WebApplication_HibaVonal.MaintananceWorker", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.Student", b =>
-                {
-                    b.HasOne("WebApplication_HibaVonal.User", null)
-                        .WithOne()
-                        .HasForeignKey("WebApplication_HibaVonal.Student", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebApplication_HibaVonal.Location", "Room")
-                        .WithMany()
-                        .HasForeignKey("RoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RoomId");
 
                     b.Navigation("Room");
                 });
 
-            modelBuilder.Entity("WebApplication_HibaVonal.IssueType", b =>
+            modelBuilder.Entity("Issue", b =>
                 {
-                    b.Navigation("Reports");
+                    b.HasOne("Room", "Room")
+                        .WithMany("Issues")
+                        .HasForeignKey("RoomId");
+
+                    b.HasOne("WebApplication_HibaVonal.Models.User", "User")
+                        .WithMany("Issues")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Room");
+
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("WebApplication_HibaVonal.Location", b =>
+            modelBuilder.Entity("MaintenanceRequest", b =>
                 {
-                    b.Navigation("Reports");
+                    b.HasOne("WebApplication_HibaVonal.Models.User", "AssignedUser")
+                        .WithMany()
+                        .HasForeignKey("AssignedTo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Issue", "Issue")
+                        .WithMany()
+                        .HasForeignKey("IssueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AssignedUser");
+
+                    b.Navigation("Issue");
                 });
 
-            modelBuilder.Entity("WebApplication_HibaVonal.Order", b =>
+            modelBuilder.Entity("Room", b =>
                 {
-                    b.Navigation("OrderItems");
+                    b.Navigation("Issues");
                 });
 
-            modelBuilder.Entity("WebApplication_HibaVonal.MaintananceManager", b =>
+            modelBuilder.Entity("WebApplication_HibaVonal.Models.User", b =>
                 {
-                    b.Navigation("Orders");
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.MaintananceWorker", b =>
-                {
-                    b.Navigation("AssignedReports");
-                });
-
-            modelBuilder.Entity("WebApplication_HibaVonal.Student", b =>
-                {
-                    b.Navigation("Reports");
+                    b.Navigation("Issues");
                 });
 #pragma warning restore 612, 618
         }
