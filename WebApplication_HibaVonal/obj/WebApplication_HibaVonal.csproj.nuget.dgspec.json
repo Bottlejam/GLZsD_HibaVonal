@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zsmar\\Source\\Repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj": {}
+    "C:\\Users\\zsmar\\source\\repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zsmar\\Source\\Repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj": {
+    "C:\\Users\\zsmar\\source\\repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zsmar\\Source\\Repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj",
+        "projectUniqueName": "C:\\Users\\zsmar\\source\\repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj",
         "projectName": "WebApplication_HibaVonal",
-        "projectPath": "C:\\Users\\zsmar\\Source\\Repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj",
+        "projectPath": "C:\\Users\\zsmar\\source\\repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj",
         "packagesPath": "C:\\Users\\zsmar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zsmar\\Source\\Repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\obj\\",
+        "outputPath": "C:\\Users\\zsmar\\source\\repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

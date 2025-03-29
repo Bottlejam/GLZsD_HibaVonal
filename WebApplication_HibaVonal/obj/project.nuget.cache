@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FhFlujK6+1g=",
+  "dgSpecHash": "ltIFQ+iSbLg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\zsmar\\Source\\Repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj",
+  "projectFilePath": "C:\\Users\\zsmar\\source\\repos\\GLZsD_HibaVonal\\WebApplication_HibaVonal\\WebApplication_HibaVonal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zsmar\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\zsmar\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
