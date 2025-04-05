@@ -436,3 +436,6 @@ C:\Users\zsmar\Source\Repos\GLZsD_HibaVonal\WebApplication_HibaVonal\bin\Debug\n
 C:\Users\zsmar\Source\Repos\GLZsD_HibaVonal\WebApplication_HibaVonal\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\zsmar\Source\Repos\GLZsD_HibaVonal\WebApplication_HibaVonal\obj\Debug\net9.0\WebApplication_HibaVonal.RazorAssemblyInfo.cache
 C:\Users\zsmar\Source\Repos\GLZsD_HibaVonal\WebApplication_HibaVonal\obj\Debug\net9.0\WebApplication_HibaVonal.RazorAssemblyInfo.cs
+C:\Users\zsmar\source\repos\GLZsD_HibaVonal\WebApplication_HibaVonal\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\zsmar\source\repos\GLZsD_HibaVonal\WebApplication_HibaVonal\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\zsmar\source\repos\GLZsD_HibaVonal\WebApplication_HibaVonal\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
