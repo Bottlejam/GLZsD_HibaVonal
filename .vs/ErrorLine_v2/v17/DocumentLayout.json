@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\migrations\\errorlinedbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\migrations\\errorlinedbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\models\\maintanancemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\models\\maintanancemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\models\\maintananceworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\models\\maintananceworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\errorlinedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\errorlinedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\dto\\createstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\dto\\createstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|c:\\users\\rock mountaindew\\source\\repos\\errorline_v2\\errorline_v2\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1801AE37-A1D1-4CE8-9C0E-F34E1D7A66CE}|ErrorLine_v2\\ErrorLine_v2.csproj|solutionrelative:errorline_v2\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ErrorLineDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Migrations\\ErrorLineDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Migrations\\ErrorLineDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Migrations\\ErrorLineDbContextModelSnapshot.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Migrations\\ErrorLineDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:33:03.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MaintananceManager.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\MaintananceManager.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Models\\MaintananceManager.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\MaintananceManager.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Models\\MaintananceManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:32:24.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MaintananceWorker.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\MaintananceWorker.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Models\\MaintananceWorker.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\MaintananceWorker.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Models\\MaintananceWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:32:17.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\User.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:32:12.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ErrorLineDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\ErrorLineDbContext.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\ErrorLineDbContext.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\ErrorLineDbContext.cs",
+              "RelativeToolTip": "ErrorLine_v2\\ErrorLineDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:28:57.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateStudentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Dto\\CreateStudentDto.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Dto\\CreateStudentDto.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Dto\\CreateStudentDto.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Dto\\CreateStudentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:28:24.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\Student.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:28:23.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\Location.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Models\\Location.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Models\\Location.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Models\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:23:21.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T14:03:23.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "ErrorLine_v2\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Rock Mountaindew\\source\\repos\\ErrorLine_v2\\ErrorLine_v2\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "ErrorLine_v2\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAQwN4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T19:15:01.592Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
