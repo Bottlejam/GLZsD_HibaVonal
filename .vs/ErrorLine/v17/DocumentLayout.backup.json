@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -186,7 +186,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
@@ -250,13 +250,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\UserService.cs",
               "RelativeToolTip": "ErrorLine\\Services\\UserService.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA9wE0AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowE0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T18:12:27.351Z",
               "EditorCaption": ""
@@ -323,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Program.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Program.cs",

@@ -39,16 +39,14 @@ namespace ErrorLine.Controllers
 
         [Authorize(Roles = "MaintenanceManager")]
         [HttpGet("MaintenanceManager/Get/IssueById/{issueId}")]
-        [AllowAnonymous]
         public async Task<IActionResult> TrackIssueReport(int issueId)
         {
             var userId = int.Parse(User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value);
             var issueReport = await _IssueReportService.TrackIssueReportAsync(issueId,userId);
             return Ok(issueReport);
         }
-
+        [Authorize(Roles = "Student")]
         [HttpGet("Student/Get/MyReports")]
-        [AllowAnonymous]
         public async Task<IActionResult> GetUserIssueReports()
         {
             var userId = int.Parse(User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value);
