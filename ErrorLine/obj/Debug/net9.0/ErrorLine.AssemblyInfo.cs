@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ErrorLine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb2d2068f710ec6094a564262fcb66e482cae052")]
 [assembly: System.Reflection.AssemblyProductAttribute("ErrorLine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ErrorLine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

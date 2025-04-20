@@ -138,7 +138,6 @@ namespace ErrorLine.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpGet("Admin/Get/AllIssueTypes")]
-        [AllowAnonymous]
         public async Task<IActionResult> GetIssueTypes()
         {
             var types = await _IssueReportService.GetIssueTypesAsync();
@@ -146,7 +145,6 @@ namespace ErrorLine.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpGet("Admin/Get/IssueTypeById/{id}")]
-        [AllowAnonymous]
         public async Task<IActionResult> GetIssueTypeById(int id)
         {
             var type = await _IssueReportService.GetIssueTypeByIdAsync( id);

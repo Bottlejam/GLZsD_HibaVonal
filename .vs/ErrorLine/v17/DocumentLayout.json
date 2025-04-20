@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,16 +39,20 @@
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\issuereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\issuereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\equipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\equipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\issuereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\issuereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\dtos\\equipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,24 +107,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\rendszfejl\\errorline\\errorline\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -186,59 +186,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EquipmentController.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\EquipmentController.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Controllers\\EquipmentController.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\EquipmentController.cs",
-              "RelativeToolTip": "ErrorLine\\Controllers\\EquipmentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T09:05:40.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IssueReportService.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\IssueReportService.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Services\\IssueReportService.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\IssueReportService.cs",
-              "RelativeToolTip": "ErrorLine\\Services\\IssueReportService.cs",
-              "ViewState": "AgIAADgBAAAAAAAAAAArwN8AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T18:50:50.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EquipmentDto.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\EquipmentDto.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\EquipmentDto.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\EquipmentDto.cs",
-              "RelativeToolTip": "ErrorLine\\Dtos\\EquipmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:10:13.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "EquipmentService.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\EquipmentService.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Services\\EquipmentService.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\EquipmentService.cs",
               "RelativeToolTip": "ErrorLine\\Services\\EquipmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJQAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAADwv5QAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T09:06:31.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "AutoMapperProfile.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\AutoMapperProfile.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Services\\AutoMapperProfile.cs",
@@ -250,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "LocationService.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\LocationService.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Services\\LocationService.cs",
@@ -262,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "NoteService.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\NoteService.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Services\\NoteService.cs",
@@ -274,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Services\\OrderService.cs",
@@ -286,55 +250,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\UserService.cs",
               "RelativeToolTip": "ErrorLine\\Services\\UserService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACgAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowE0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T18:12:27.351Z"
+              "WhenOpened": "2025-04-17T18:12:27.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "IssueReportController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\IssueReportController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\IssueReportController.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\IssueReportController.cs",
               "RelativeToolTip": "ErrorLine\\Controllers\\IssueReportController.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAkwFEAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T18:51:22.636Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "LocationController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\LocationController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\LocationController.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\LocationController.cs",
               "RelativeToolTip": "ErrorLine\\Controllers\\LocationController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADYAAABlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T12:28:45.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "NoteController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\NoteController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\NoteController.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\NoteController.cs",
               "RelativeToolTip": "ErrorLine\\Controllers\\NoteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T14:24:37.392Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\UserController.cs",
@@ -346,128 +311,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\OrderController.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\OrderController.cs",
               "RelativeToolTip": "ErrorLine\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T19:05:18.095Z",
+              "WhenOpened": "2025-04-18T19:05:18.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Program.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Program.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Program.cs",
+              "RelativeToolTip": "ErrorLine\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T09:09:18.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "OrderDto.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\OrderDto.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\OrderDto.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\OrderDto.cs",
-              "RelativeToolTip": "ErrorLine\\Dtos\\OrderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T10:18:04.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "NoteDto.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\NoteDto.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\NoteDto.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\NoteDto.cs",
-              "RelativeToolTip": "ErrorLine\\Dtos\\NoteDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T12:28:37.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\OrderItem.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Entities\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\OrderItem.cs",
-              "RelativeToolTip": "ErrorLine\\Entities\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T12:18:00.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IssueTypeDto.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\IssueTypeDto.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\IssueTypeDto.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\IssueTypeDto.cs",
-              "RelativeToolTip": "ErrorLine\\Dtos\\IssueTypeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:10:25.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IssueReportDto.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\IssueReportDto.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\IssueReportDto.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\IssueReportDto.cs",
-              "RelativeToolTip": "ErrorLine\\Dtos\\IssueReportDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:09:25.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IssueReport.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\IssueReport.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Entities\\IssueReport.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\IssueReport.cs",
-              "RelativeToolTip": "ErrorLine\\Entities\\IssueReport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:39:08.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\User.cs",
-              "RelativeToolTip": "ErrorLine\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:26:06.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "20250420174206_fix_enum_mistype.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Migrations\\20250420174206_fix_enum_mistype.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Migrations\\20250420174206_fix_enum_mistype.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Migrations\\20250420174206_fix_enum_mistype.cs",
-              "RelativeToolTip": "ErrorLine\\Migrations\\20250420174206_fix_enum_mistype.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:42:06.903Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "20250420172844_maintenancemanager.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs",
-              "RelativeToolTip": "ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:28:44.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Context\\AppDbContext.cs",
@@ -479,15 +348,159 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Program.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Program.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Program.cs",
-              "RelativeToolTip": "ErrorLine\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\appsettings.json",
+              "RelativeDocumentMoniker": "ErrorLine\\appsettings.json",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\appsettings.json",
+              "RelativeToolTip": "ErrorLine\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-20T13:56:48.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EquipmentDto.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\EquipmentDto.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\EquipmentDto.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\EquipmentDto.cs",
+              "RelativeToolTip": "ErrorLine\\Dtos\\EquipmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:09:18.422Z"
+              "WhenOpened": "2025-04-17T12:10:13.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IssueReportService.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\IssueReportService.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Services\\IssueReportService.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Services\\IssueReportService.cs",
+              "RelativeToolTip": "ErrorLine\\Services\\IssueReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T18:50:50.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EquipmentController.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\EquipmentController.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Controllers\\EquipmentController.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Controllers\\EquipmentController.cs",
+              "RelativeToolTip": "ErrorLine\\Controllers\\EquipmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T09:05:40.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\OrderDto.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\OrderDto.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\OrderDto.cs",
+              "RelativeToolTip": "ErrorLine\\Dtos\\OrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T10:18:04.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NoteDto.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\NoteDto.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\NoteDto.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\NoteDto.cs",
+              "RelativeToolTip": "ErrorLine\\Dtos\\NoteDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:28:37.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\OrderItem.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Entities\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\OrderItem.cs",
+              "RelativeToolTip": "ErrorLine\\Entities\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T12:18:00.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IssueTypeDto.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\IssueTypeDto.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\IssueTypeDto.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\IssueTypeDto.cs",
+              "RelativeToolTip": "ErrorLine\\Dtos\\IssueTypeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T12:10:25.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IssueReportDto.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\IssueReportDto.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Dtos\\IssueReportDto.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\IssueReportDto.cs",
+              "RelativeToolTip": "ErrorLine\\Dtos\\IssueReportDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T12:09:25.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IssueReport.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\IssueReport.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Entities\\IssueReport.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\IssueReport.cs",
+              "RelativeToolTip": "ErrorLine\\Entities\\IssueReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T09:39:08.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\User.cs",
+              "RelativeToolTip": "ErrorLine\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T09:26:06.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20250420174206_fix_enum_mistype.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Migrations\\20250420174206_fix_enum_mistype.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Migrations\\20250420174206_fix_enum_mistype.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Migrations\\20250420174206_fix_enum_mistype.cs",
+              "RelativeToolTip": "ErrorLine\\Migrations\\20250420174206_fix_enum_mistype.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T17:42:06.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20250420172844_maintenancemanager.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs",
+              "RelativeToolTip": "ErrorLine\\Migrations\\20250420172844_maintenancemanager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T17:28:44.816Z"
             },
             {
               "$type": "Document",
@@ -503,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Note.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Entities\\Note.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Entities\\Note.cs",
@@ -515,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\Dtos\\UserDto.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Dtos\\UserDto.cs",
@@ -560,18 +573,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T10:30:35.194Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\appsettings.json",
-              "RelativeDocumentMoniker": "ErrorLine\\appsettings.json",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\rendszfejl\\ErrorLine\\ErrorLine\\appsettings.json",
-              "RelativeToolTip": "ErrorLine\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-20T13:56:48.192Z"
             },
             {
               "$type": "Document",

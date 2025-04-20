@@ -170,3 +170,4 @@ C:\Users\Rácz György\Desktop\rendszfejl\ErrorLine\ErrorLine\bin\Debug\net9.0\z
 C:\Users\Rácz György\Desktop\rendszfejl\ErrorLine\ErrorLine\bin\Debug\net9.0\AutoMapper.dll
 C:\Users\Rácz György\Desktop\rendszfejl\ErrorLine\ErrorLine\bin\Debug\net9.0\BCrypt.Net-Next.dll
 C:\Users\Rácz György\Desktop\rendszfejl\ErrorLine\ErrorLine\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Rácz György\Desktop\rendszfejl\ErrorLine\ErrorLine\obj\Debug\net9.0\ErrorLine.sourcelink.json
