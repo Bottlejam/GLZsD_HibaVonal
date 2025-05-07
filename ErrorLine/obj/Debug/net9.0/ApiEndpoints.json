@@ -1,0 +1,612 @@
+[
+  {
+    "ContainingType": "ErrorLine.Controllers.EquipmentController",
+    "Method": "CreateEquipment",
+    "RelativePath": "api/Equipment/Admin/Create/Equipment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ErrorLine.Dtos.EquipmentCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.EquipmentController",
+    "Method": "DeleteEquipment",
+    "RelativePath": "api/Equipment/Admin/Delete/Equipment/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.EquipmentController",
+    "Method": "GetAllEquipments",
+    "RelativePath": "api/Equipment/Admin/Get/AllEquipments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.EquipmentController",
+    "Method": "GetEquipmentByid",
+    "RelativePath": "api/Equipment/Admin/Get/EquipmentById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.EquipmentController",
+    "Method": "UpdateEquipment",
+    "RelativePath": "api/Equipment/Admin/Update/Equipment/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "EquipmentDto",
+        "Type": "ErrorLine.Dtos.EquipmentUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "CreateIssueType",
+    "RelativePath": "api/IssueReport/Admin/Create/IssueType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueReportDto",
+        "Type": "ErrorLine.Dtos.CreateIssueTypeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "DeleteIssueType",
+    "RelativePath": "api/IssueReport/Admin/Delete/IssueType/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "GetIssueTypes",
+    "RelativePath": "api/IssueReport/Admin/Get/AllIssueTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "GetIssueTypeById",
+    "RelativePath": "api/IssueReport/Admin/Get/IssueTypeById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "UpdateIssueType",
+    "RelativePath": "api/IssueReport/Admin/Update/IssueType/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ErrorLine.Dtos.UpdateIssueTypeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "AssignWorker",
+    "RelativePath": "api/IssueReport/MaintenanceManager/AssignWorkerForIssue/{issueId}/{userId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "ChangeIssueStatus",
+    "RelativePath": "api/IssueReport/MaintenanceManager/ChangeIssueStatus/{issueId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "GetAllIssueReports",
+    "RelativePath": "api/IssueReport/MaintenanceManager/Get/AllIssueReports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "TrackIssueReport",
+    "RelativePath": "api/IssueReport/MaintenanceManager/Get/IssueById/{issueId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "GetWorkerIssueReports",
+    "RelativePath": "api/IssueReport/MaintenanceWorker/Get/ReportsAssignedToMe",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "MarkAsCompleted",
+    "RelativePath": "api/IssueReport/MaintenanceWorker/MarkIssueAsCompleted/{issueId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "ChangeDescription",
+    "RelativePath": "api/IssueReport/Student/Change/Description/{issueId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newDescription",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "CreateIssueReport",
+    "RelativePath": "api/IssueReport/Student/Create/IssueReport",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueReportDto",
+        "Type": "ErrorLine.Dtos.CreateIssueReportDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "DeleteReport",
+    "RelativePath": "api/IssueReport/Student/Delete/MyReport/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "GetUserIssueReports",
+    "RelativePath": "api/IssueReport/Student/Get/MyReports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.IssueReportController",
+    "Method": "MarkAsValidated",
+    "RelativePath": "api/IssueReport/Student/ValidateIssue/{issueId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.LocationController",
+    "Method": "CreateLocation",
+    "RelativePath": "api/Location/Admin/Create/Location",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ErrorLine.Dtos.CreateLocationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.LocationController",
+    "Method": "DeleteLocation",
+    "RelativePath": "api/Location/Admin/Delete/Location/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.LocationController",
+    "Method": "GetAllLocations",
+    "RelativePath": "api/Location/Admin/Get/AllLocations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.LocationController",
+    "Method": "GetLocationById",
+    "RelativePath": "api/Location/Admin/Get/LocationById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.LocationController",
+    "Method": "UpdateLocation",
+    "RelativePath": "api/Location/Admin/Update/Location/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ErrorLine.Dtos.UpdateLocationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.NoteController",
+    "Method": "DeleteAnyNote",
+    "RelativePath": "api/Note/MaintenanceManager/Delete/Note/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.NoteController",
+    "Method": "GetAllNotes",
+    "RelativePath": "api/Note/MaintenanceManager/Get/AllNotes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.NoteController",
+    "Method": "GetNoteById",
+    "RelativePath": "api/Note/MaintenanceManager/Get/NoteById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.NoteController",
+    "Method": "CreateNote",
+    "RelativePath": "api/Note/Student/Create/Note/{issueId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issueId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "text",
+        "Type": "ErrorLine.Dtos.NoteCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.NoteController",
+    "Method": "DeleteNote",
+    "RelativePath": "api/Note/Student/Delete/Note/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.NoteController",
+    "Method": "GetUserNotes",
+    "RelativePath": "api/Note/Student/Get/MyNotes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.NoteController",
+    "Method": "UpdateNote",
+    "RelativePath": "api/Note/Student/Update/Note/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ErrorLine.Dtos.NoteUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.OrderController",
+    "Method": "TrackOrder",
+    "RelativePath": "api/Order/Get/MaintenanceManager/OrderById/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.OrderController",
+    "Method": "CancelOrder",
+    "RelativePath": "api/Order/MaintenanceManager/CancelOrder/{orderId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.OrderController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/Order/MaintenanceWorker\u0026Manager/Create/Order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderDto",
+        "Type": "ErrorLine.Dtos.OrderCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.OrderController",
+    "Method": "GetAllOrders",
+    "RelativePath": "api/Order/MaintenanceWorker\u0026Manager/Get/Allorders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.UserController",
+    "Method": "Login",
+    "RelativePath": "api/User/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "ErrorLine.Dtos.UserLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ErrorLine.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "api/User/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "ErrorLine.Dtos.UserRegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
