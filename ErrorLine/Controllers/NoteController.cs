@@ -144,7 +144,7 @@ namespace ErrorLine.Controllers
             {
                 return NotFound(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
             }
-            catch (NoteIsNotYourDormitaryException ex)
+            catch (NoteIsNotInYourDormitaryException ex)
             {
                 return NotFound(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
             }

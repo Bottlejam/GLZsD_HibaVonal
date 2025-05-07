@@ -279,7 +279,7 @@ namespace ErrorLine.Services
             }
             if (issue.AssignedWorkerId != userId)
             {
-                throw new IssueReportIsNotAssignedForYouException();
+                throw new IssueReportIsNotAssignedForToException();
             }
             if (issue.IssueStatus != IssueStatus.InProgress)
             {

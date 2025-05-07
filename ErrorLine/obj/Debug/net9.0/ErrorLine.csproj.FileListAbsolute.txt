@@ -343,3 +343,4 @@ C:\Users\Rácz György\Desktop\bandadno\GLZsD_HibaVonal-Beadando_teljes\ErrorLin
 C:\Users\Rácz György\Desktop\bandadno\GLZsD_HibaVonal-Beadando_teljes\ErrorLine\obj\Debug\net9.0\ErrorLine.pdb
 C:\Users\Rácz György\Desktop\bandadno\GLZsD_HibaVonal-Beadando_teljes\ErrorLine\obj\Debug\net9.0\ErrorLine.genruntimeconfig.cache
 C:\Users\Rácz György\Desktop\bandadno\GLZsD_HibaVonal-Beadando_teljes\ErrorLine\obj\Debug\net9.0\ref\ErrorLine.dll
+C:\Users\Rácz György\Desktop\bandadno\GLZsD_HibaVonal-Beadando_teljes\ErrorLine\obj\Debug\net9.0\ErrorLine.sourcelink.json

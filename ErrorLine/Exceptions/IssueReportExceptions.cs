@@ -49,9 +49,9 @@
         }
 
     }
-    public class IssueReportIsNotAssignedForYouException : BaseApiException
+    public class IssueReportIsNotAssignedForToException : BaseApiException
     {
-        public IssueReportIsNotAssignedForYouException() : base(403, "This issue has not been assigned to you.")
+        public IssueReportIsNotAssignedForToException() : base(403, "This issue has not been assigned to you.")
         {
         }
 

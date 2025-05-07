@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\userexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\userexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\orderexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\orderexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\noteexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\noteexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\locationexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\locationexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\issuereportexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\issuereportexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\equipmentexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\equipmentexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\baseapiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\baseapiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,14 +59,6 @@
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\userexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\userexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\noteexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\noteexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -53,26 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\migrations\\20250417193231_dorm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\migrations\\20250417193231_dorm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\orderexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\orderexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\locationexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\locationexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\baseapiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\baseapiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\issuereportexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\issuereportexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\exceptions\\equipmentexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|solutionrelative:errorline\\exceptions\\equipmentexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAB4CB24-E075-4CCD-98A4-9C4B199BBA62}|ErrorLine\\ErrorLine.csproj|c:\\users\\r\u00E1cz gy\u00F6rgy\\desktop\\bandadno\\glzsd_hibavonal-beadando_teljes\\errorline\\services\\noteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -218,7 +218,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -230,98 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EquipmentExceptions.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\EquipmentExceptions.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\EquipmentExceptions.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\EquipmentExceptions.cs",
-              "RelativeToolTip": "ErrorLine\\Exceptions\\EquipmentExceptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T10:45:23.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BaseApiException.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\BaseApiException.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\BaseApiException.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\BaseApiException.cs",
-              "RelativeToolTip": "ErrorLine\\Exceptions\\BaseApiException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T12:57:25.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20250417193231_dorm.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Migrations\\20250417193231_dorm.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Migrations\\20250417193231_dorm.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Migrations\\20250417193231_dorm.cs",
-              "RelativeToolTip": "ErrorLine\\Migrations\\20250417193231_dorm.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAgwJ0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T19:32:31.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20250506180953_fix-mispells.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Migrations\\20250506180953_fix-mispells.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Migrations\\20250506180953_fix-mispells.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Migrations\\20250506180953_fix-mispells.cs",
-              "RelativeToolTip": "ErrorLine\\Migrations\\20250506180953_fix-mispells.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAQwOIAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:09:54.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Note.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Entities\\Note.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Entities\\Note.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Entities\\Note.cs",
-              "RelativeToolTip": "ErrorLine\\Entities\\Note.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T12:14:09.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Entities\\Order.cs",
-              "RelativeToolTip": "ErrorLine\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T11:52:46.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Services\\UserService.cs",
-              "RelativeToolTip": "ErrorLine\\Services\\UserService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAIwCkAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T18:12:27.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "IssueReportController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Controllers\\IssueReportController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\IssueReportController.cs",
@@ -334,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\UserController.cs",
@@ -342,12 +251,11 @@
               "RelativeToolTip": "ErrorLine\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T14:33:01.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T14:33:01.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\OrderController.cs",
@@ -355,12 +263,11 @@
               "RelativeToolTip": "ErrorLine\\Controllers\\OrderController.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAIwGsAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T19:05:18.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T19:05:18.095Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "NoteController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Controllers\\NoteController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\NoteController.cs",
@@ -373,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "LocationController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Controllers\\LocationController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\LocationController.cs",
@@ -381,12 +288,11 @@
               "RelativeToolTip": "ErrorLine\\Controllers\\LocationController.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAIwDEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T10:59:12.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T10:59:12.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "EquipmentController.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Controllers\\EquipmentController.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Controllers\\EquipmentController.cs",
@@ -399,46 +305,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "NoteExceptions.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\NoteExceptions.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\NoteExceptions.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\NoteExceptions.cs",
               "RelativeToolTip": "ErrorLine\\Exceptions\\NoteExceptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T11:56:50.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserExceptions.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\UserExceptions.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\UserExceptions.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\UserExceptions.cs",
-              "RelativeToolTip": "ErrorLine\\Exceptions\\UserExceptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T09:26:37.787Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LocationExceptions.cs",
-              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\LocationExceptions.cs",
-              "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\LocationExceptions.cs",
-              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\LocationExceptions.cs",
-              "RelativeToolTip": "ErrorLine\\Exceptions\\LocationExceptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T17:51:42.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "OrderExceptions.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\OrderExceptions.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\OrderExceptions.cs",
@@ -451,16 +331,128 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 0,
+              "Title": "UserExceptions.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\UserExceptions.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\UserExceptions.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\UserExceptions.cs",
+              "RelativeToolTip": "ErrorLine\\Exceptions\\UserExceptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:26:37.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LocationExceptions.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\LocationExceptions.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\LocationExceptions.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\LocationExceptions.cs",
+              "RelativeToolTip": "ErrorLine\\Exceptions\\LocationExceptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T17:51:42.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EquipmentExceptions.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\EquipmentExceptions.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\EquipmentExceptions.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\EquipmentExceptions.cs",
+              "RelativeToolTip": "ErrorLine\\Exceptions\\EquipmentExceptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T10:45:23.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IssueReportExceptions.cs",
               "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\IssueReportExceptions.cs",
               "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\IssueReportExceptions.cs",
               "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\IssueReportExceptions.cs",
               "RelativeToolTip": "ErrorLine\\Exceptions\\IssueReportExceptions.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAuwBIAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T13:07:59.307Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseApiException.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\BaseApiException.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Exceptions\\BaseApiException.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Exceptions\\BaseApiException.cs",
+              "RelativeToolTip": "ErrorLine\\Exceptions\\BaseApiException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T12:57:25.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Services\\UserService.cs",
+              "RelativeToolTip": "ErrorLine\\Services\\UserService.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwCkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T18:12:27.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Entities\\Order.cs",
+              "RelativeToolTip": "ErrorLine\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T11:52:46.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Note.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Entities\\Note.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Entities\\Note.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Entities\\Note.cs",
+              "RelativeToolTip": "ErrorLine\\Entities\\Note.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:14:09.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20250506180953_fix-mispells.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Migrations\\20250506180953_fix-mispells.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Migrations\\20250506180953_fix-mispells.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Migrations\\20250506180953_fix-mispells.cs",
+              "RelativeToolTip": "ErrorLine\\Migrations\\20250506180953_fix-mispells.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAQwOIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T18:09:54.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20250417193231_dorm.cs",
+              "DocumentMoniker": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Migrations\\20250417193231_dorm.cs",
+              "RelativeDocumentMoniker": "ErrorLine\\Migrations\\20250417193231_dorm.cs",
+              "ToolTip": "C:\\Users\\R\u00E1cz Gy\u00F6rgy\\Desktop\\bandadno\\GLZsD_HibaVonal-Beadando_teljes\\ErrorLine\\Migrations\\20250417193231_dorm.cs",
+              "RelativeToolTip": "ErrorLine\\Migrations\\20250417193231_dorm.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAgwJ0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T19:32:31.954Z"
             },
             {
               "$type": "Document",
@@ -485,8 +477,7 @@
               "RelativeToolTip": "ErrorLine\\Services\\LocationService.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAkwC8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T12:29:06.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T12:29:06.494Z"
             },
             {
               "$type": "Document",
@@ -511,8 +502,7 @@
               "RelativeToolTip": "ErrorLine\\Services\\OrderService.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAAwHEAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T19:05:44.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T19:05:44.517Z"
             },
             {
               "$type": "Document",
@@ -524,8 +514,7 @@
               "RelativeToolTip": "ErrorLine\\Entities\\IssueType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:48:34.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T09:48:34.453Z"
             },
             {
               "$type": "Document",
@@ -537,8 +526,7 @@
               "RelativeToolTip": "ErrorLine\\Entities\\IssueReport.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:39:08.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T09:39:08.065Z"
             },
             {
               "$type": "Document",
@@ -550,8 +538,7 @@
               "RelativeToolTip": "ErrorLine\\Services\\EquipmentService.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAkwIgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T09:06:31.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T09:06:31.465Z"
             },
             {
               "$type": "Document",
@@ -563,8 +550,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\OrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T10:18:04.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T10:18:04.626Z"
             },
             {
               "$type": "Document",
@@ -576,8 +562,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\NoteDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T12:28:37.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T12:28:37.461Z"
             },
             {
               "$type": "Document",
@@ -589,8 +574,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\ApiResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T13:02:28.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T13:02:28.322Z"
             },
             {
               "$type": "Document",
@@ -602,8 +586,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\UserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwB0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T10:00:29.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T10:00:29.469Z"
             },
             {
               "$type": "Document",
@@ -615,8 +598,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\LocationDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:16:52.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T12:16:52.754Z"
             },
             {
               "$type": "Document",
@@ -628,8 +610,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\IssueTypeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:10:25.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T12:10:25.188Z"
             },
             {
               "$type": "Document",
@@ -641,8 +622,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\DormitoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T11:23:51.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T11:23:51.094Z"
             },
             {
               "$type": "Document",
@@ -654,8 +634,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\EquipmentDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:10:13.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T12:10:13.703Z"
             },
             {
               "$type": "Document",
@@ -667,8 +646,7 @@
               "RelativeToolTip": "ErrorLine\\Dtos\\IssueReportDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:09:25.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T12:09:25.321Z"
             },
             {
               "$type": "Document",
@@ -692,8 +670,7 @@
               "RelativeToolTip": "ErrorLine\\Entities\\OrderItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T12:18:00.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T12:18:00.593Z"
             },
             {
               "$type": "Document",

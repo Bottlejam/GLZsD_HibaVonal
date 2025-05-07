@@ -144,7 +144,7 @@ namespace ErrorLine.Services
             }
             if (note.IssueReport.DormitoryId != user.DormitoryId)
             {
-                throw new NoteIsNotYourDormitaryException();
+                throw new NoteIsNotInYourDormitaryException();
             }
             _context.Notes.Remove(note);
             await _context.SaveChangesAsync();

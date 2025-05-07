@@ -283,7 +283,7 @@ namespace ErrorLine.Controllers
             {
                 return NotFound(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
             }
-            catch (IssueReportIsNotAssignedForYouException ex)
+            catch (IssueReportIsNotAssignedForToException ex)
             {
                 return BadRequest(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
             }

@@ -14,9 +14,9 @@
         }
 
     }
-    public class NoteIsNotYourDormitaryException : BaseApiException
+    public class NoteIsNotInYourDormitaryException : BaseApiException
     {
-        public NoteIsNotYourDormitaryException() : base(403, "Note is not in your dormitary.")
+        public NoteIsNotInYourDormitaryException() : base(403, "Note is not in your dormitary.")
         {
         }
 
