@@ -12,7 +12,7 @@ namespace ErrorLine.Dtos
         public Dormitory Dormitory { get; set; }
        
     }
-    public class UserRegisterDto
+    public class StudentUserRegisterDto
     {
         [Required]
         [StringLength(50)]
@@ -25,9 +25,54 @@ namespace ErrorLine.Dtos
         [Required]
         [MinLength(6)]
         public string Password { get; set; }
-
-        public UserRole? Role { get; set; }
+        [Required]
         public int DormitoryId { get; set; }
+    }
+    public class MaintenanceStaffUserRegisterDto
+    {
+        [Required]
+        [StringLength(50)]
+        public string Username { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [MinLength(6)]
+        public string Password { get; set; }
+        [Required]
+        public UserRole Role { get; set; }
+    }
+    public class AdminUserRegisterDto
+    {
+        [Required]
+        [StringLength(50)]
+        public string Username { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [MinLength(6)]
+        public string Password { get; set; }
+        [Required]
+        public int DormitoryId { get; set; }
+    }
+    public class SystemAdminUserRegisterDto
+    {
+        [Required]
+        [StringLength(50)]
+        public string Username { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [MinLength(6)]
+        public string Password { get; set; }
     }
     public class UserLoginDto
     {

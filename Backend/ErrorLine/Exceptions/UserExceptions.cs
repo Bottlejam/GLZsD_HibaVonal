@@ -30,5 +30,18 @@
         {
         }
     }
+    public class InvalidRoleInUserRegistrationException : BaseApiException
+    {
+        public InvalidRoleInUserRegistrationException() : base(403, "You can't register user with this role.")
+        {
+        }
+    }
+    public class EmailAlreadyExistsException : BaseApiException
+    {
+        public EmailAlreadyExistsException() : base(400, "Email already exists.")
+        {
+        }
+    }
+
 
 }

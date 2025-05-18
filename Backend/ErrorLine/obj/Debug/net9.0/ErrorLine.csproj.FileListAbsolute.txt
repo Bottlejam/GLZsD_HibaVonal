@@ -688,3 +688,4 @@ C:\Users\mobil\Desktop\bandó\GLZsD_HibaVonal-Beadando_teljes\Backend\ErrorLine\
 C:\Users\mobil\Desktop\bandó\GLZsD_HibaVonal-Beadando_teljes\Backend\ErrorLine\obj\Debug\net9.0\ErrorLine.pdb
 C:\Users\mobil\Desktop\bandó\GLZsD_HibaVonal-Beadando_teljes\Backend\ErrorLine\obj\Debug\net9.0\ErrorLine.genruntimeconfig.cache
 C:\Users\mobil\Desktop\bandó\GLZsD_HibaVonal-Beadando_teljes\Backend\ErrorLine\obj\Debug\net9.0\ref\ErrorLine.dll
+C:\Users\mobil\Desktop\bandó\GLZsD_HibaVonal-Beadando_teljes\Backend\ErrorLine\obj\Debug\net9.0\ErrorLine.sourcelink.json

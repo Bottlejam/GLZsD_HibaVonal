@@ -86,7 +86,7 @@ namespace ErrorLine.Services
                 Stock = dto.Stock,
                 Price = dto.Price,
                 LocationId = dto.LocationId,
-                DormitoryId = user.DormitoryId
+                DormitoryId = user.DormitoryId ?? 0
             };
 
             await _context.Equipments.AddAsync(equipment);

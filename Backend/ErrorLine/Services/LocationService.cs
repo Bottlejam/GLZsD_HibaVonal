@@ -64,7 +64,7 @@ namespace ErrorLine.Services
             {
                 Name = dto.Name,
                 LocationType = dto.LocationType,
-                DormitoryId = user.DormitoryId,
+                DormitoryId = user.DormitoryId ?? 0,
                 
             };
 

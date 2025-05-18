@@ -6,4 +6,14 @@
         public string Name { get; set; }
         public string Address { get; set; }
     }
+    public class CreateDormitoryDto
+    {
+        public string Name { get; set; }
+        public string Address { get; set; }
+    }
+    public class UpdateDormitoryDto
+    {
+        public string Name { get; set; }
+        public string Address { get; set; }
+    }
 }

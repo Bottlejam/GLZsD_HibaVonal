@@ -29,7 +29,7 @@ namespace ErrorLine.Services
             var user = await _context.Users.FindAsync(userId);
             var order = new Order
             {
-                DormitoryId= user.DormitoryId,
+                DormitoryId= user.DormitoryId ?? 0,
                 OrderStatus = OrderStatus.Pending,
                 OrderDate = DateTime.Now,
                 UserId = user.Id,

@@ -1,0 +1,19 @@
+# Ignore Visual Studio temporary files, build results, and
+# user-generated files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Ignore node modules (frontend)
+node_modules/
+
+# Ignore package lock files if you want (opcionális)
+package-lock.json
+yarn.lock
+
+# Egyéb IDE vagy OS fájlok
+*.log
+*.DS_Store
+Thumbs.db

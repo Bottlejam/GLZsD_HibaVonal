@@ -7,7 +7,8 @@ namespace ErrorLine.Entities
         Student,
         MaintenanceWorker,
         MaintenanceManager,
-        Admin
+        Admin,
+        SystemAdmin
     }
     public class User
     {
@@ -16,8 +17,8 @@ namespace ErrorLine.Entities
         public string Email { get; set; }
         public string Password { get; set; }
         public UserRole Role { get; set; }
-        public int DormitoryId { get; set; }
-        public Dormitory Dormitory { get; set; }
+        public int? DormitoryId { get; set; }
+        public Dormitory? Dormitory { get; set; }
         
     }
     

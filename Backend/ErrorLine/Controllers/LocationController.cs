@@ -10,7 +10,7 @@ namespace ErrorLine.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")]
+    
     public class LocationController : ControllerBase
     {
         private readonly ILocationService _LocationService;
@@ -19,6 +19,7 @@ namespace ErrorLine.Controllers
         {
             _LocationService = locationService;
         }
+        [Authorize(Roles = "Student,Admin")]
         [HttpGet("Admin/Get/AllLocations")]
         public async Task<IActionResult> GetAllLocations()
         {
@@ -33,6 +34,7 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "Student,Admin")]
         [HttpGet("Admin/Get/LocationById/{id}")]
         public async Task<IActionResult> GetLocationById(int id)
         {
@@ -56,6 +58,7 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost("Admin/Create/Location")]
         public async Task<IActionResult> CreateLocation([FromBody] CreateLocationDto dto)
         {
@@ -74,6 +77,7 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpDelete("Admin/Delete/Location/{id}")]
         public async Task<IActionResult> DeleteLocation(int id)
         {
@@ -98,6 +102,7 @@ namespace ErrorLine.Controllers
 
 
         }
+        [Authorize(Roles = "Admin")]
         [HttpPut("Admin/Update/Location/{id}")]
         public async Task<IActionResult> UpdateLocation(int id, [FromBody] UpdateLocationDto dto)
         {

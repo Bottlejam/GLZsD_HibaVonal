@@ -94,6 +94,10 @@ namespace ErrorLine.Services
             {
                 throw new LocationNotInYourDormitaryException();
             }
+            if (!_context.IssueTypes.Any(i => i.Id == dto.IssueTypeId))
+            {
+                throw new IssueTypeNotFoundException();
+            }
             
 
             
@@ -106,7 +110,7 @@ namespace ErrorLine.Services
                 LocationId = location.Id,
                 ReporterId = userId,
                 IssueTypeId = (int)dto.IssueTypeId,
-                DormitoryId = user.DormitoryId,
+                DormitoryId = user.DormitoryId ?? 0,
                 IssueStatus = IssueStatus.New
             };
 
@@ -151,6 +155,7 @@ namespace ErrorLine.Services
                     .ThenInclude(i => i.Dormitory)
                 .Include(o => o.IssueType)
                 .Include(o => o.Reporter)
+                .Include(o=>o.Notes)
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<IssueReportDto>>(issueReports);
@@ -234,6 +239,7 @@ namespace ErrorLine.Services
             await _context.SaveChangesAsync();
             
         }
+      
         public async Task ChangeIssueStatusAsync(int issueId, IssueStatus status,int userId)
         {
             var issue = await _context.IssueReports.FindAsync(issueId);

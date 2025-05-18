@@ -52,6 +52,10 @@ namespace ErrorLine.Controllers
             {
                 return NotFound(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
             }
+            catch (IssueTypeNotFoundException ex)
+            {
+                return NotFound(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
+            }
             catch (Exception ex)
             {
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured"));

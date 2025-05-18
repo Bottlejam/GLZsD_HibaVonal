@@ -1,5 +1,6 @@
 using ErrorLine;
 using ErrorLine.Context;
+using ErrorLine.Entities;
 using ErrorLine.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,7 @@ namespace ErrorLine
             builder.Services.AddScoped<IOrderService, OrderService>();
             builder.Services.AddScoped<IEquipmentService, EquipmentService>();
             builder.Services.AddScoped<ILocationService, LocationService>();
+            builder.Services.AddScoped<IDormitaryService, DormitoryService>();
             builder.Services.AddScoped<IUserService, UserService>();
 
 
@@ -75,7 +77,19 @@ namespace ErrorLine
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
-            
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontendDev",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:5173") // vagy több origin: .WithOrigins(...).AllowAnyMethod().AllowAnyHeader()
+                              .AllowAnyHeader()
+                              .AllowAnyMethod()
+                              .AllowCredentials(); // ha cookie vagy auth header is van
+                    });
+            });
+
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
@@ -103,7 +117,29 @@ namespace ErrorLine
             });
 
             var app = builder.Build();
-           
+
+            SeedSystemAdminAsync(app.Services).GetAwaiter().GetResult();
+
+            static async Task SeedSystemAdminAsync(IServiceProvider serviceProvider)
+            {
+                using var scope = serviceProvider.CreateScope();
+                var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+                if (!context.Users.Any(u => u.Role == UserRole.SystemAdmin))
+                {
+                    var systemAdmin = new User
+                    {
+                        Username = "systemadmin",
+                        Email = "systemadmin@example.com",
+                        Password = BCrypt.Net.BCrypt.HashPassword("Jelszo123!"),
+                        Role = UserRole.SystemAdmin,
+                        DormitoryId = null
+                    };
+                    context.Users.Add(systemAdmin);
+                    await context.SaveChangesAsync();
+                }
+            }
+
 
 
             // Configure the HTTP request pipeline.
@@ -117,7 +153,9 @@ namespace ErrorLine
 
             app.UseHttpsRedirection();
 
-            
+            app.UseCors("AllowFrontendDev");
+
+
             app.UseAuthentication();
             app.UseAuthorization();
 

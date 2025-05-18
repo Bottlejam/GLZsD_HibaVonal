@@ -5,6 +5,137 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Dormitory/SystemAdmin/Get/AllDormitorories": {
+      "get": {
+        "tags": [
+          "Dormitory"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dormitory/SystemAdmin/Get/DormitoryById/{id}": {
+      "get": {
+        "tags": [
+          "Dormitory"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dormitory/SystemAdmin/Create/Dormitory": {
+      "post": {
+        "tags": [
+          "Dormitory"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDormitoryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDormitoryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDormitoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dormitory/SystemAdmin/Delete/Dormitory/{id}": {
+      "delete": {
+        "tags": [
+          "Dormitory"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dormitory/SystemAdmin/Update/Location/{id}": {
+      "put": {
+        "tags": [
+          "Dormitory"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDormitoryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDormitoryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDormitoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Equipment/Admin/Get/AllEquipments": {
       "get": {
         "tags": [
@@ -979,17 +1110,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRegisterDto"
+                "$ref": "#/components/schemas/StudentUserRegisterDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRegisterDto"
+                "$ref": "#/components/schemas/StudentUserRegisterDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRegisterDto"
+                "$ref": "#/components/schemas/StudentUserRegisterDto"
               }
             }
           }
@@ -1000,10 +1131,183 @@
           }
         }
       }
+    },
+    "/api/User/Admin/registerMaintenanceStaff": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MaintenanceStaffUserRegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MaintenanceStaffUserRegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MaintenanceStaffUserRegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/SystemAdmin/registerAdmin": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminUserRegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminUserRegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminUserRegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/SystemAdmin/registerSystemAdmin": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SystemAdminUserRegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SystemAdminUserRegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SystemAdminUserRegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/SystemAdmin/Get/AllAdminUsers": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/Admin/Get/AllUsersInDormitory": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/MaintenanceManager/Get/AllMaintenanceWorkersInDormitory": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "AdminUserRegisterDto": {
+        "required": [
+          "dormitoryId",
+          "email",
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 6,
+            "type": "string"
+          },
+          "dormitoryId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateDormitoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateIssueReportDto": {
         "required": [
           "description",
@@ -1124,6 +1428,35 @@
         "type": "integer",
         "format": "int32"
       },
+      "MaintenanceStaffUserRegisterDto": {
+        "required": [
+          "email",
+          "password",
+          "role",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 6,
+            "type": "string"
+          },
+          "role": {
+            "$ref": "#/components/schemas/UserRole"
+          }
+        },
+        "additionalProperties": false
+      },
       "NoteCreateDto": {
         "required": [
           "text"
@@ -1185,6 +1518,75 @@
         },
         "additionalProperties": false
       },
+      "StudentUserRegisterDto": {
+        "required": [
+          "dormitoryId",
+          "email",
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 6,
+            "type": "string"
+          },
+          "dormitoryId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SystemAdminUserRegisterDto": {
+        "required": [
+          "email",
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 6,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateDormitoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateIssueTypeDto": {
         "type": "object",
         "properties": {
@@ -1227,44 +1629,13 @@
         },
         "additionalProperties": false
       },
-      "UserRegisterDto": {
-        "required": [
-          "email",
-          "password",
-          "username"
-        ],
-        "type": "object",
-        "properties": {
-          "username": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string"
-          },
-          "email": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "password": {
-            "minLength": 6,
-            "type": "string"
-          },
-          "role": {
-            "$ref": "#/components/schemas/UserRole"
-          },
-          "dormitoryId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
       "UserRole": {
         "enum": [
           0,
           1,
           2,
-          3
+          3,
+          4
         ],
         "type": "integer",
         "format": "int32"

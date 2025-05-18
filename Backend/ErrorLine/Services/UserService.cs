@@ -15,9 +15,14 @@ namespace ErrorLine.Services
 {
     public interface IUserService
     {
-        Task<UserDto> RegisterAsync(UserRegisterDto userDto);
+        Task<UserDto> RegisterStudentAsync(StudentUserRegisterDto userDto);
         Task<string> LoginAsync(UserLoginDto userDto);
-        
+        Task<IEnumerable<UserDto>> GetAdminUsersAsync();
+        Task<IEnumerable<UserDto>> GetUsersInDormitoryAsync(int id);
+        Task<UserDto> RegisterMaintenanceStaffInDormitoryAsync(MaintenanceStaffUserRegisterDto userDto, int id);
+        Task<UserDto> RegisterAdminAsync(AdminUserRegisterDto userDto);
+        Task<UserDto> RegisterSystemAdminAsync(SystemAdminUserRegisterDto userDto);
+        Task<IEnumerable<UserDto>> GetMaintenanceWorkersInDormitoryAsync(int userId);
     }
     public class UserService:IUserService
     {
@@ -74,18 +79,134 @@ namespace ErrorLine.Services
 
             return new ClaimsIdentity(claims, "Token");
         }
-        public async Task<UserDto> RegisterAsync(UserRegisterDto userDto)
+        public async Task<UserDto> RegisterStudentAsync(StudentUserRegisterDto userDto)
         {
+            if (await _context.Users.AnyAsync(u => u.Email == userDto.Email))
+            {
+                throw new EmailAlreadyExistsException();
+            }
             var user = _mapper.Map<User>(userDto);
             user.Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
             user.DormitoryId = userDto.DormitoryId;
 
-            user.Role = userDto.Role ?? UserRole.Student;
+            if (!_context.Dormitories.Any(d => d.Id == userDto.DormitoryId))
+            {
+               throw new DormitoryNotFoundException();
+            }
+
+            user.Role = UserRole.Student;
 
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
 
+
+            await _context.Entry(user)
+                  .Reference(u => u.Dormitory)
+                  .LoadAsync();
+
             return _mapper.Map<UserDto>(user);
+        }
+
+        public async Task<UserDto> RegisterMaintenanceStaffInDormitoryAsync(MaintenanceStaffUserRegisterDto userDto,int id)
+        {
+            if (await _context.Users.AnyAsync(u => u.Email == userDto.Email))
+            {
+                throw new EmailAlreadyExistsException();
+            }
+            if (!(userDto.Role == UserRole.MaintenanceWorker || userDto.Role == UserRole.MaintenanceManager))
+            {
+                throw new InvalidRoleInUserRegistrationException();
+            }
+            var u = await _context.Users.FindAsync(id);
+            var user = _mapper.Map<User>(userDto);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
+            user.DormitoryId = u.DormitoryId;
+
+           
+
+           
+
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+
+
+            await _context.Entry(user)
+                  .Reference(u => u.Dormitory)
+                  .LoadAsync();
+
+            return _mapper.Map<UserDto>(user);
+        }
+        public async Task<UserDto> RegisterAdminAsync(AdminUserRegisterDto userDto)
+        {
+            if (await _context.Users.AnyAsync(u => u.Email == userDto.Email))
+            {
+                throw new EmailAlreadyExistsException();
+            }
+
+            var user = _mapper.Map<User>(userDto);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
+            
+
+            if (!_context.Dormitories.Any(d=>d.Id==userDto.DormitoryId))
+            {
+                throw new DormitoryNotFoundException();
+            }
+            user.Role = UserRole.Admin;
+
+
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+
+            await _context.Entry(user)
+                  .Reference(u => u.Dormitory)
+                  .LoadAsync();
+
+            return _mapper.Map<UserDto>(user);
+        }
+
+        public async Task<UserDto> RegisterSystemAdminAsync(SystemAdminUserRegisterDto userDto)
+        {
+            if (await _context.Users.AnyAsync(u => u.Email == userDto.Email))
+            {
+                throw new EmailAlreadyExistsException();
+            }
+            var user = _mapper.Map<User>(userDto);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
+
+            user.Role = UserRole.SystemAdmin;
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+
+           
+
+            return _mapper.Map<UserDto>(user);
+        }
+
+        public async Task<IEnumerable<UserDto>> GetAdminUsersAsync()
+        {
+            var users = await _context.Users.Where(u => u.Role == UserRole.Admin).Include(a=>a.Dormitory).ToListAsync();
+
+           
+
+            return _mapper.Map<IEnumerable<UserDto>>(users);
+        }
+        public async Task<IEnumerable<UserDto>> GetUsersInDormitoryAsync(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            var users = await _context.Users.Where(u => u.DormitoryId==user.DormitoryId).Include(u=>u.Dormitory).ToListAsync();
+
+            return _mapper.Map<IEnumerable<UserDto>>(users);
+        }
+        public async Task<IEnumerable<UserDto>> GetMaintenanceWorkersInDormitoryAsync(int userId)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            var users = await _context.Users
+                .Where(u => u.DormitoryId == user.DormitoryId && u.Role==UserRole.MaintenanceWorker)
+                .Include(o => o.Dormitory)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<UserDto>>(users);
+
         }
     }
 }

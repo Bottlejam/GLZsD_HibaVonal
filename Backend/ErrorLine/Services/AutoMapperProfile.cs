@@ -12,7 +12,10 @@ namespace ErrorLine.Services
         {
             // User Mappings
             CreateMap<User, UserDto>().ReverseMap();
-            CreateMap<UserRegisterDto, User>();
+            CreateMap<StudentUserRegisterDto, User>();
+            CreateMap<AdminUserRegisterDto, User>();
+            CreateMap<MaintenanceStaffUserRegisterDto, User>();
+            CreateMap<SystemAdminUserRegisterDto, User>();
 
             // Eqiupment Mappings
             CreateMap<Equipment, EquipmentDto>().ReverseMap();
@@ -36,7 +39,11 @@ namespace ErrorLine.Services
 
 
             // Dormitary Mappings
-            CreateMap<Dormitory, DormitoryDto>();
+            CreateMap<Dormitory, DormitoryDto>().ReverseMap();
+            CreateMap<UpdateDormitoryDto, DormitoryDto>().ReverseMap();
+            CreateMap<UpdateDormitoryDto, Dormitory>();
+
+
 
             //Location Mappings
             CreateMap<Location, LocationDto>();
