@@ -15,11 +15,12 @@ import GetDormitoryById from "./actions/GetDormitoryById";
 import CreateDormitory from "./actions/CreateDormitory";
 import DeleteDormitory from "./actions/DeleteDormitory";
 import UpdateDormitory from "./actions/UpdateDormitory";
-import GetAllLocations from "./actions/GetAllLocations";
-import GetLocationById from "./actions/GetLocationById";
-import CreateLocationForm from "./actions/CreateLocation";
-import DeleteLocationForm from "./actions/DeleteLocation";
-import UpdateLocationForm from "./actions/UpdateLocation";
+import GetAllEquipments from "./actions/GetAllEquipments";
+import GetEquipmentById  from "./actions/GetEquipmentById";
+import CreateEquipment from "./actions/CreateEquipment";
+import DeleteEquipment from "./actions/DeleteEquipment";
+import UpdateEquipment from "./actions/UpdateEquipment";
+
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -50,13 +51,14 @@ const Dashboard: React.FC = () => {
       <CreateDormitory />
       <DeleteDormitory />
       <UpdateDormitory />
-      <GetAllLocations />
-      <GetLocationById />
-      <CreateLocationForm />
-      <DeleteLocationForm />
-      <UpdateLocationForm />
+      <GetAllEquipments />
+      <GetEquipmentById />
+      <CreateEquipment />
+      <DeleteEquipment />
+      <UpdateEquipment />
     </div>
   );
 };
 
 export default Dashboard;
+
