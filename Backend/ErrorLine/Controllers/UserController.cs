@@ -39,7 +39,7 @@ namespace ErrorLine.Controllers
             }
 
         }
-        [HttpPost("register")]
+        [HttpPost("Anonymuous/registerStudent")]
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] StudentUserRegisterDto userDto)
         {
@@ -62,7 +62,7 @@ namespace ErrorLine.Controllers
             }
         }
         [HttpPost("Admin/registerMaintenanceStaff")]
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> RegisterMaintenanceStaff([FromBody] MaintenanceStaffUserRegisterDto userDto)
         {
             try
@@ -85,7 +85,7 @@ namespace ErrorLine.Controllers
             }
         }
         [HttpPost("SystemAdmin/registerAdmin")]
-        [AllowAnonymous]
+        [Authorize(Roles = "SystemAdmin")]
         public async Task<IActionResult> RegisterAdmin([FromBody] AdminUserRegisterDto userDto)
         {
             try
@@ -108,7 +108,7 @@ namespace ErrorLine.Controllers
             }
         }
         [HttpPost("SystemAdmin/registerSystemAdmin")]
-        [AllowAnonymous]
+        [Authorize(Roles = "SystemAdmin")]
         public async Task<IActionResult> RegisterSystemAdmin([FromBody] SystemAdminUserRegisterDto userDto)
         {
             try

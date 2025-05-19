@@ -1101,7 +1101,7 @@
         }
       }
     },
-    "/api/User/register": {
+    "/api/User/Anonymuous/registerStudent": {
       "post": {
         "tags": [
           "User"
