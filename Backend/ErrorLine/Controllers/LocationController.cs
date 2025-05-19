@@ -20,7 +20,7 @@ namespace ErrorLine.Controllers
             _LocationService = locationService;
         }
         [Authorize(Roles = "Student,Admin")]
-        [HttpGet("Admin/Get/AllLocations")]
+        [HttpGet("Admin&Student/Get/AllLocations")]
         public async Task<IActionResult> GetAllLocations()
         {
             try
@@ -35,7 +35,7 @@ namespace ErrorLine.Controllers
             }
         }
         [Authorize(Roles = "Student,Admin")]
-        [HttpGet("Admin/Get/LocationById/{id}")]
+        [HttpGet("Admin&Student/Get/LocationById/{id}")]
         public async Task<IActionResult> GetLocationById(int id)
         {
             try

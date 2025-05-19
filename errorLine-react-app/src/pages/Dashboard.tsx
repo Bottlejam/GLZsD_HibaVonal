@@ -15,6 +15,11 @@ import GetDormitoryById from "./actions/GetDormitoryById";
 import CreateDormitory from "./actions/CreateDormitory";
 import DeleteDormitory from "./actions/DeleteDormitory";
 import UpdateDormitory from "./actions/UpdateDormitory";
+import GetAllLocations from "./actions/GetAllLocations";
+import GetLocationById from "./actions/GetLocationById";
+import CreateLocationForm from "./actions/CreateLocation";
+import DeleteLocationForm from "./actions/DeleteLocation";
+import UpdateLocationForm from "./actions/UpdateLocation";
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -45,7 +50,11 @@ const Dashboard: React.FC = () => {
       <CreateDormitory />
       <DeleteDormitory />
       <UpdateDormitory />
-      
+      <GetAllLocations />
+      <GetLocationById />
+      <CreateLocationForm />
+      <DeleteLocationForm />
+      <UpdateLocationForm />
     </div>
   );
 };
