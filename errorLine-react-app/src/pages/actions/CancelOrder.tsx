@@ -1,54 +1,45 @@
 import React, { useState } from "react";
-import axios from "axios";
 import API_BASE_URL from "../api";
 
 const CancelOrder: React.FC = () => {
-  const [orderId, setOrderId] = useState("");
-  const [message, setMessage] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [orderId, setOrderId] = useState<number>(0);
+  const token = localStorage.getItem("token");
 
-  const handleCancelOrder = async () => {
+  const handleCancel = async () => {
     try {
-      const token = localStorage.getItem("token");
-      const response = await axios.patch(
-        `${API_BASE_URL}/api/User/MaintenanceManager/CancelOrder/{orderId}`,
-        {},
+      const response = await fetch(
+        `${API_BASE_URL}/api/Order/MaintenanceManager/CancelOrder/${orderId}`,
         {
+          method: "PATCH", // 🔁 PATCH, nem DELETE
           headers: {
             Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
           },
         }
       );
 
-      if (response.data.statusCode === 200) {
-        setMessage(response.data.message);
-        setError(null);
+      const result = await response.json();
+
+      if (!response.ok) {
+        alert("Hiba: " + result.message);
       } else {
-        setError("Nem sikerült a rendelés törlése.");
-        setMessage(null);
+        alert(result.message || "Sikeres törlés");
       }
-    } catch (err: any) {
-      if (err.response?.data?.message) {
-        setError(err.response.data.message);
-      } else {
-        setError("Ismeretlen hiba történt.");
-      }
-      setMessage(null);
+    } catch (error) {
+      console.error("Hiba:", error);
     }
   };
 
   return (
     <div>
-      <h2>Rendelés törlése</h2>
+      <h2>Rendelés törlése (státusz: visszavonás)</h2>
       <input
         type="number"
-        placeholder="Rendelés azonosító"
+        placeholder="Rendelés ID"
         value={orderId}
-        onChange={(e) => setOrderId(e.target.value)}
+        onChange={(e) => setOrderId(Number(e.target.value))}
       />
-      <button onClick={handleCancelOrder}>Törlés</button>
-      {message && <p style={{ color: "green" }}>{message}</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      <button onClick={handleCancel}>Rendelés visszavonása</button>
     </div>
   );
 };

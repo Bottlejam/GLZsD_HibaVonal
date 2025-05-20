@@ -35,14 +35,14 @@ namespace ErrorLine.Controllers
             }
         }
         [Authorize(Roles = "Student,Admin")]
-        [HttpGet("Admin/Get/LocationById/{id}")]
-        public async Task<IActionResult> GetLocationById(int id)
+        [HttpGet("Admin/Get/LocationById/{locationId}")]
+        public async Task<IActionResult> GetLocationById(int locationId)
         {
             try
             {
 
                 var userid = int.Parse(User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value);
-                var locations = await _LocationService.GetLocationByIdAsync(id, userid);
+                var locations = await _LocationService.GetLocationByIdAsync(locationId, userid);
                 return Ok(new ApiResponseDto<object>(200, "Location has been found succesfully.", locations));
             }
             catch (LocationNotFoundException ex)
@@ -103,13 +103,13 @@ namespace ErrorLine.Controllers
 
         }
         [Authorize(Roles = "Admin")]
-        [HttpPut("Admin/Update/Location/{id}")]
-        public async Task<IActionResult> UpdateLocation(int id, [FromBody] UpdateLocationDto dto)
+        [HttpPut("Admin/Update/Location/{locationId}")]
+        public async Task<IActionResult> UpdateLocation(int locationId, [FromBody] UpdateLocationDto dto)
         {
             try
             {
                 var userid = int.Parse(User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value);
-                var location = await _LocationService.UpdateLocationAsync(id, dto, userid);
+                var location = await _LocationService.UpdateLocationAsync(locationId, dto, userid);
                 return Ok(new ApiResponseDto<object>(200, "Location has been deleted succesfully.", location));
             }
             catch (LocationNotFoundException ex)

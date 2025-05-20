@@ -5,6 +5,7 @@ using ErrorLine.Services;
 using System.Security.Claims;
 using ErrorLine.Entities;
 using ErrorLine.Exceptions;
+using System.Text.Json.Serialization;
 
 namespace ErrorLine.Controllers
 {
@@ -350,6 +351,7 @@ namespace ErrorLine.Controllers
 
 
         }
+
         [Authorize(Roles = "Admin")]
         [HttpDelete("Admin/Delete/IssueType/{id}")]
         public async Task<IActionResult> DeleteIssueType(int id)
@@ -387,11 +389,25 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "Student")]
+        [HttpGet("Student/Get/IssueById/{issueId}")]
+        public async Task<IActionResult> TrackStudentIssueReport(int issueId)
+        {
+            try
+            {
+                var userId = int.Parse(User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value);
+                var issueReport = await _IssueReportService.TrackStudentIssueReportAsync(issueId, userId);
+                return Ok(new ApiResponseDto<object>(200, "Issuereport has been found successfully.", issueReport));
+            }
+            catch (IssueReportNotFoundException ex)
+            {
+                return NotFound(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
+            }
 
-
-
-
-
-
+            catch (Exception ex)
+            {
+                return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured"));
+            }
+        }
     }
 }

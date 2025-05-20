@@ -1,4 +1,5 @@
 ﻿using ErrorLine.Entities;
+using System.Text.Json.Serialization;
 
 namespace ErrorLine.Dtos
 {
@@ -12,12 +13,14 @@ namespace ErrorLine.Dtos
     public class CreateLocationDto
     {
         public string Name { get; set; }
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public LocationType LocationType { get; set; }
       
     }
     public class UpdateLocationDto
     {
         public string Name { get; set; }
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public LocationType LocationType { get; set; }
 
     }

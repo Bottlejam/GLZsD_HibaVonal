@@ -67,7 +67,7 @@ namespace ErrorLine.Controllers
             }
         }
         [Authorize(Roles = "MaintenanceWorker,MaintenanceManager")]
-        [HttpGet("MaintenanceWorker&Manager/Get/Allorders")]
+        [HttpGet("Get/Allorders")]
         public async Task<IActionResult> GetAllOrders()
         {
             try
@@ -107,10 +107,6 @@ namespace ErrorLine.Controllers
             {
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
-
-
-
-
         }
     }
 }

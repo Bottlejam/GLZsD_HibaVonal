@@ -29,6 +29,7 @@ namespace ErrorLine.Services
         
         Task<IssueTypeDto> UpdateIssueTypeAsync(int id, UpdateIssueTypeDto issuetypeDto);
 
+        Task<IssueReportDto> TrackStudentIssueReportAsync(int issueId, int userId);
 
     }
     public class IssueReportService:IIssueReportService
@@ -349,7 +350,23 @@ namespace ErrorLine.Services
             return _mapper.Map<IssueTypeDto>(issueType);
         }
 
+        public async Task<IssueReportDto> TrackStudentIssueReportAsync(int issueId, int userId)
+        {
 
+            var issueReport = await _context.IssueReports.Where(i => i.ReporterId == userId)
+                .Include(r => r.Location)
+                .ThenInclude(l => l.Dormitory)
+                .Include(r => r.IssueType)
+                .Include(r => r.Reporter)
+                .FirstOrDefaultAsync(r => r.Id == issueId);
+
+            if (issueReport == null)
+            {
+                throw new IssueReportNotFoundException();
+            }
+
+            return _mapper.Map<IssueReportDto>(issueReport);
+        }
 
 
 

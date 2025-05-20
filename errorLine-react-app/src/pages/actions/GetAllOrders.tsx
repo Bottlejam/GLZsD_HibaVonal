@@ -1,77 +1,84 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import API_BASE_URL from "../api";
 
-interface EquipmentDto {
-  name: string;
+interface OrderItem {
+  equipmentId: number;
+  equipmentName: string;
   quantity: number;
+  equipmentPrice: number;
 }
 
-interface OrderItemDto {
-  equipment: EquipmentDto;
-  quantity: number;
-}
-
-interface OrderDto {
+interface Order {
   id: number;
-  status: string;
-  orderItems: OrderItemDto[];
-  dormitory: {
-    name: string;
-  };
+  userId: number;
+  orderItems: OrderItem[];
+  orderStatus: number;
+  createdAt: Date;
 }
 
 const GetAllOrders: React.FC = () => {
-  const [orders, setOrders] = useState<OrderDto[]>([]);
-  const [error, setError] = useState<string | null>(null);
+  const [orders, setOrders] = useState<Order[]>([]);
+  const token = localStorage.getItem("token");
+
+  const orderStatusMap: { [key: number]: string } = {
+    0: "Függőben",
+    1: "Jóváhagyva",
+    2: "Megérkezett",
+    3: "Elutasítva",
+  };
+
+  const handleOrder = async () => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/Order/Get/Allorders`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        alert("Hiba: " + errorText);
+        return;
+      }
+
+      const result = await response.json();
+      setOrders(result.data);
+    } catch (error) {
+      console.error("Hiba a rendelések lekérésekor:", error);
+    }
+  };
 
   useEffect(() => {
-    const fetchOrders = async () => {
-      try {
-        const token = localStorage.getItem("token");
-        const response = await axios.get(
-          `${API_BASE_URL}/api/User/MaintenanceWorker&Manager/Get/Allorders`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-
-        const ordersData: OrderDto[] = response.data.data;
-        setOrders(ordersData);
-        setError(null);
-      } catch (err: any) {
-        setError(
-          err.response?.data?.message ||
-            "Hiba történt a rendelések lekérésekor."
-        );
-      }
-    };
-
-    fetchOrders();
+    handleOrder();
   }, []);
 
   return (
     <div>
-      <h2>Összes rendelés a kollégiumban</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {!error && orders.length === 0 && <p>Nincs rendelés.</p>}
-      <ul>
-        {orders.map((order) => (
-          <li key={order.id}>
-            <strong>Rendelés #{order.id}</strong> – Állapot: {order.status} –
-            Kollégium: {order.dormitory.name}
-            <ul>
-              {order.orderItems.map((item, index) => (
-                <li key={index}>
-                  {item.equipment.name} – {item.quantity} db
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      <h2>Összes rendelés</h2>
+      {orders.length === 0 ? (
+        <p>Nincs rendelés.</p>
+      ) : (
+        orders.map((order) => (
+          <div key={order.id} style={{ marginBottom: "1rem" }}>
+            <p>
+              <strong>Rendelés ID:</strong> {order.id}
+            </p>
+            <p>
+              <strong>Felhasználó ID:</strong> {order.userId}
+            </p>
+            <p>
+              <strong>Státusz:</strong> {orderStatusMap[order.orderStatus]}
+            </p>
+            <p>
+              <strong>Létrehozva:</strong>{" "}
+              {new Date(order.createdAt).toLocaleString()}
+            </p>
+            <hr />
+          </div>
+        ))
+      )}
     </div>
   );
 };

@@ -29,7 +29,7 @@ const CreateOrderForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/User/Create/Order`, {
+      const response = await fetch(`${API_BASE_URL}/api/Order/Create/Order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

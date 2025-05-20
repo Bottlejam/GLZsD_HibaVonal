@@ -1,32 +1,36 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
 
+interface OrderItem {
+  equipmentId: number;
+  equipmentName: string;
+  quantity: number;
+  equipmentPrice: number;
+}
+
 interface Order {
   id: number;
-  equipmentId: number;
-  quantity: number;
-  status: string;
-  description?: string;
+  userId: number;
+  orderItems: OrderItem[];
+  orderStatus: number;
+  createdAt: Date;
 }
 
 const TrackOrder: React.FC = () => {
+  const [order, setOrders] = useState<Order>();
   const [orderId, setOrderId] = useState<number>(0);
-  const [order, setOrder] = useState<Order | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
   const token = localStorage.getItem("token");
+  const orderStatusMap: { [key: number]: string } = {
+    0: "Függőben",
+    1: "Jóváhagyva",
+    2: "Megérkezett",
+    3: "Elutasítva",
+  };
 
-  const handleFetchOrder = async () => {
-    if (!token) {
-      setError("Nem vagy bejelentkezve.");
-      setMessage(null);
-      return;
-    }
-
+  const handleOrder = async () => {
     try {
       const response = await fetch(
-        `${API_BASE_URL}/api/User/Get/MaintenanceManager/OrderById/${orderId}`,
+        `${API_BASE_URL}/api/Order/Get/MaintenanceManager/OrderById/${orderId}`,
         {
           method: "GET",
           headers: {
@@ -38,18 +42,13 @@ const TrackOrder: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setOrder(result.data);
-        setMessage(result.message);
-        setError(null);
+        setOrders(result.data);
+        console.log(result);
       } else {
-        setError(result.message || "Hiba történt a rendelés lekérésekor.");
-        setMessage(null);
-        setOrder(null);
+        alert("Hiba: " + result.message);
       }
-    } catch (err) {
-      setError("Hálózati hiba történt.");
-      setMessage(null);
-      setOrder(null);
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -61,33 +60,36 @@ const TrackOrder: React.FC = () => {
         placeholder="Rendelés ID"
         value={orderId}
         onChange={(e) => setOrderId(Number(e.target.value))}
-        min={1}
       />
-      <button onClick={handleFetchOrder}>Lekérés</button>
+      <button onClick={handleOrder}>Lekérés</button>
 
-      {message && <div style={{ color: "green" }}>{message}</div>}
-      {error && <div style={{ color: "red" }}>{error}</div>}
-
-      {order && (
-        <div style={{ marginTop: "1em" }}>
+      {order && order.orderItems && order.orderItems.length > 0 && (
+        <div>
           <h3>Rendelés adatai:</h3>
           <p>
-            <strong>ID:</strong> {order.id}
+            <strong>Rendelés ID:</strong> {order.id}
           </p>
           <p>
-            <strong>Eszköz ID:</strong> {order.equipmentId}
+            <strong>Felhasználó ID:</strong> {order.userId}
           </p>
           <p>
-            <strong>Mennyiség:</strong> {order.quantity}
+            <strong>Állapot:</strong> {orderStatusMap[order.orderStatus]}
           </p>
           <p>
-            <strong>Állapot:</strong> {order.status}
+            <strong>Létrehozva:</strong>{" "}
+            {new Date(order.createdAt).toLocaleString()}
           </p>
-          {order.description && (
-            <p>
-              <strong>Leírás:</strong> {order.description}
-            </p>
-          )}
+
+          <h4>Tételek:</h4>
+          <ul>
+            {order.orderItems.map((item, index) => (
+              <li key={index}>
+                Eszköz: {item.equipmentName} (ID: {item.equipmentId}) –
+                Mennyiség: {item.quantity} – Egységár: {item.equipmentPrice} Ft
+                – Összesen: {item.equipmentPrice * item.quantity} Ft
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
