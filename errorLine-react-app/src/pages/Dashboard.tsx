@@ -20,6 +20,13 @@ import GetEquipmentById  from "./actions/GetEquipmentById";
 import CreateEquipment from "./actions/CreateEquipment";
 import DeleteEquipment from "./actions/DeleteEquipment";
 import UpdateEquipment from "./actions/UpdateEquipment";
+import StudentGetMyNotes from "./actions/StudentGetMyNotes";
+import CreateNote from "./actions/CreateNote";
+import MaintenanceManagerGetAllNotes from "./actions/MaintananceManagerGetAllNotes";
+import GetNoteById from "./actions/MaintananceManagerGetNoteById";
+import DeleteAnyNote from "./actions/MaintananceManagerDeleteNoteById";
+import DeleteMyNote from "./actions/StudentDeleteNote";
+import UpdateNote from "./actions/StudentUpdateNote";
 
 
 const Dashboard: React.FC = () => {
@@ -56,9 +63,17 @@ const Dashboard: React.FC = () => {
       <CreateEquipment />
       <DeleteEquipment />
       <UpdateEquipment />
+      <StudentGetMyNotes />
+      <CreateNote />
+      <MaintenanceManagerGetAllNotes />
+      <GetNoteById />
+      <DeleteAnyNote />
+      <DeleteMyNote />
+      <UpdateNote />
     </div>
   );
 };
 
 export default Dashboard;
+
 
