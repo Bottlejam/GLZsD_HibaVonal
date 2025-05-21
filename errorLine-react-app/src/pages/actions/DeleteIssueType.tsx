@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const DeleteIssueType: React.FC = () => {
   const [id, setId] = useState<number>(0);
@@ -12,8 +13,7 @@ const DeleteIssueType: React.FC = () => {
     e.preventDefault();
     setMessage(null);
     setError(null);
-
-    try {
+ try {
       const response = await fetch(
         `${API_BASE_URL}/api/IssueReportController/Admin/Delete/IssueType/${id}`,
         {
@@ -27,13 +27,13 @@ const DeleteIssueType: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Hibatípus sikeresen törölve.");
+        toast.success("Hibatípus sikeresen törölve.");
         setId(0);
       } else {
-        setError(result.message || "Hiba történt a törlés során.");
+        toast.error(result.message || "Hiba történt a törlés során.");
       }
     } catch (err) {
-      setError("Ismeretlen hiba történt.");
+      toast.error("Ismeretlen hiba történt.");
     }
   };
 

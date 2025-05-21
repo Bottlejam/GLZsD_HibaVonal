@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface CreateLocationDto {
   name: string;
@@ -24,7 +25,7 @@ const CreateLocationForm: React.FC = () => {
       locationType,
     };
 
-    try {
+     try {
       const response = await fetch(
         `${API_BASE_URL}/api/Location/Admin/Create/Location`,
         {
@@ -40,16 +41,17 @@ const CreateLocationForm: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Helyszín sikeresen létrehozva!");
+        toast.success("Helyszín sikeresen létrehozva!");
         setName("");
         setLocationType("CommonPlace");
       } else {
-        setError(result.message || "Hiba történt a létrehozás során.");
+        toast.error(result.message || "Hiba történt a létrehozás során.");
       }
     } catch (err: any) {
-      setError("Ismeretlen hiba történt.");
+      toast.error("Ismeretlen hiba történt.");
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>

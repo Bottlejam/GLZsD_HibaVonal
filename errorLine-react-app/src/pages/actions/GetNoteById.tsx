@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 const GetNoteById: React.FC = () => {
   const [noteId, setNoteId] = useState<number | "">("");
   const [note, setNote] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
+   const [loading, setLoading] = useState(false);
 
   const token = localStorage.getItem("token");
 
@@ -19,8 +21,8 @@ const GetNoteById: React.FC = () => {
       setNote(null);
       return;
     }
-
-    try {
+     setLoading(true);
+      try {
       const response = await fetch(
         `${API_BASE_URL}/api/Note/MaintenanceManager/Get/NoteById/${noteId}`,
         {
@@ -36,14 +38,16 @@ const GetNoteById: React.FC = () => {
 
       if (response.ok) {
         setNote(result.data);
-        setError(null);
+        toast.success("Jegyzet sikeresen lekérve.");
       } else {
-        setError(result.message || "Hiba történt a jegyzet lekérdezésekor.");
+        toast.error(result.message || "Hiba történt a jegyzet lekérdezésekor.");
         setNote(null);
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
+      toast.error("Hálózati hiba történt.");
       setNote(null);
+    } finally {
+      setLoading(false);
     }
   };
 

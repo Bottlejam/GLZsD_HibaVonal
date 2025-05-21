@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface MaintenanceWorker {
   id: number;
@@ -15,7 +16,7 @@ const MaintenanceWorkersList: React.FC = () => {
 
   useEffect(() => {
     const fetchWorkers = async () => {
-      try {
+       try {
         const response = await fetch(
           `${API_BASE_URL}/api/User/MaintenanceManager/Get/AllMaintenanceWorkersInDormitory`,
           {
@@ -28,18 +29,17 @@ const MaintenanceWorkersList: React.FC = () => {
         if (response.ok) {
           const result = await response.json();
           setWorkers(result.data);
-          setError(null);
         } else if (response.status === 401 || response.status === 403) {
-          setError(
+          toast.error(
             "Nincs jogosultság vagy lejárt a token. Kérlek jelentkezz be újra."
           );
           setWorkers([]);
         } else {
-          setError("Hiba történt a karbantartók lekérésekor.");
+          toast.error("Hiba történt a karbantartók lekérésekor.");
           setWorkers([]);
         }
       } catch (error) {
-        setError("Hálózati hiba történt.");
+        toast.error("Hálózati hiba történt.");
         setWorkers([]);
       }
     };
@@ -47,17 +47,13 @@ const MaintenanceWorkersList: React.FC = () => {
     fetchWorkers();
   }, [token]);
 
-  if (error) {
-    return <div style={{ color: "red" }}>{error}</div>;
-  }
-
   return (
     <div>
       <h2>Karbantartók listája a kollégiumban</h2>
       <ul>
         {workers.map((worker) => (
           <li key={worker.id}>
-            {worker.username} - {worker.email}
+           Felhasználónév: {worker.username} - Email:{worker.email}
           </li>
         ))}
       </ul>

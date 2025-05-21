@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface Location {
   id: number;
@@ -54,12 +55,13 @@ const GetEquipmentById: React.FC = () => {
 
       if (response.ok) {
         setEquipment(result.data);
+        toast.success("Eszköz sikeresen lekérve.");
       } else {
-        setError(result.message || "Hiba történt a lekéréskor.");
+        toast.error(result.message || "Hiba történt a lekéréskor.");
         setEquipment(null);
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
+      toast.error("Hálózati hiba történt.");
       setEquipment(null);
     } finally {
       setLoading(false);

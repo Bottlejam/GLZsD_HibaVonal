@@ -1,5 +1,6 @@
 import { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const AdminRegistrationForm: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -24,7 +25,7 @@ const AdminRegistrationForm: React.FC = () => {
       dormitoryId: parsedDormitoryId,
     };
 
-    try {
+     try {
       const response = await fetch(
         `${API_BASE_URL}/api/User/SystemAdmin/registerAdmin`,
         {
@@ -38,15 +39,21 @@ const AdminRegistrationForm: React.FC = () => {
       );
 
       if (response.ok) {
-        alert("Sikeres regisztráció!");
+        toast.success("Sikeres regisztráció!");
         const result = await response.json();
         console.log(result);
+        // Ha akarod, itt törölheted a form mezőket:
+        setUsername("");
+        setEmail("");
+        setPassword("");
+        setDormitoryId("");
       } else {
         const error = await response.json();
-        alert("Hiba: " + error.message);
+        toast.error("Hiba: " + error.message);
       }
     } catch (error) {
       console.error(error);
+      toast.error("Hálózati hiba történt.");
     }
   };
 

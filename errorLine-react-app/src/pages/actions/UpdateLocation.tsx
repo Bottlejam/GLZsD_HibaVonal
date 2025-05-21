@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 const UpdateLocationForm: React.FC = () => {
   const [locationId, setLocationId] = useState<number>(0);
@@ -36,14 +37,15 @@ const UpdateLocationForm: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Helyszín sikeresen frissítve.");
+        toast.success("Helyszín sikeresen frissítve.");
       } else {
-        setError(result.message || "Hiba a frissítés során.");
+        toast.error(result.message || "Hiba a frissítés során.");
       }
     } catch (err) {
-      setError("Ismeretlen hiba történt.");
+      toast.error("Ismeretlen hiba történt.");
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>

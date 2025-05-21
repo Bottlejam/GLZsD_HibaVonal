@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface IssueReport {
   id: number;
@@ -47,7 +48,9 @@ const GetReports_Worker: React.FC = () => {
 
   useEffect(() => {
     const fetchIssueReports = async () => {
-      try {
+      setLoading(true); 
+     try {
+      
         const response = await fetch(
           `${API_BASE_URL}/api/IssueReport/MaintenanceWorker/Get/ReportsAssignedToMe`,
           {
@@ -67,10 +70,12 @@ const GetReports_Worker: React.FC = () => {
         setIssueReports(result.data);
       } catch (err: any) {
         setError(err.message || "Ismeretlen hiba történt.");
+        toast.error(err.message || "Ismeretlen hiba történt.");
       } finally {
         setLoading(false);
       }
     };
+
 
     fetchIssueReports();
   }, []);

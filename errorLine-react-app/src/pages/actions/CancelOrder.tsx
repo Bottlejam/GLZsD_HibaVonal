@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const CancelOrder: React.FC = () => {
-  const [orderId, setOrderId] = useState<number>(0);
+  const [orderId, setOrderId] = useState<number | "">("");
   const token = localStorage.getItem("token");
 
   const handleCancel = async () => {
@@ -21,12 +22,14 @@ const CancelOrder: React.FC = () => {
       const result = await response.json();
 
       if (!response.ok) {
-        alert("Hiba: " + result.message);
+        toast.error(result.message || "Hiba történt a rendelés visszavonásakor.");
       } else {
-        alert(result.message || "Sikeres törlés");
+        toast.success(result.message || "Sikeres rendelés visszavonás.");
+        setOrderId(""); // reseteljük az inputot
       }
     } catch (error) {
       console.error("Hiba:", error);
+      toast.error("Hálózati hiba történt.");
     }
   };
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface UpdateDormitoryDto {
   name: string;
@@ -14,6 +15,7 @@ const UpdateDormitory: React.FC = () => {
   });
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+   const [loading, setLoading] = useState(false);
 
   const token = localStorage.getItem("token");
 
@@ -40,7 +42,7 @@ const UpdateDormitory: React.FC = () => {
       setMessage(null);
       return;
     }
-
+     setLoading(true);
     try {
       const response = await fetch(
         `${API_BASE_URL}/api/Dormitory/SystemAdmin/Update/Location/${dormitoryId}`,
@@ -57,15 +59,14 @@ const UpdateDormitory: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message || "Kollégium sikeresen frissítve.");
-        setError(null);
+        toast.success(result.message || "Kollégium sikeresen frissítve.");
       } else {
-        setError(result.message || "Hiba történt a kollégium frissítésekor.");
-        setMessage(null);
+        toast.error(result.message || "Hiba történt a kollégium frissítésekor.");
       }
-    } catch (err) {
-      setError("Hálózati hiba történt.");
-      setMessage(null);
+    } catch {
+      toast.error("Hálózati hiba történt.");
+    } finally {
+      setLoading(false);
     }
   };
 

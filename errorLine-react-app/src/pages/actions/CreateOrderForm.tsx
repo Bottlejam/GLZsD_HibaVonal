@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface OrderCreateDto {
   equipmentId: number;
@@ -41,16 +42,13 @@ const CreateOrderForm: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message);
-        setError(null);
+        toast.success(result.message || "Rendelés sikeresen létrehozva!");
         setOrderItems([]);
       } else {
-        setError(result.message || "Hiba történt a rendelés létrehozásakor.");
-        setMessage(null);
+        toast.error(result.message || "Hiba történt a rendelés létrehozásakor.");
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
-      setMessage(null);
+      toast.error("Hálózati hiba történt.");
     }
   };
 

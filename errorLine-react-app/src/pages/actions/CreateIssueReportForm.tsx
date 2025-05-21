@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
-
+import toast from "react-hot-toast";
 interface Location {
   id: number;
   name: string;
@@ -32,25 +32,26 @@ const CreateIssueReportForm: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [locationsRes, issueTypesRes] = await Promise.all([
-          fetch(`${API_BASE_URL}/api/Location/Admin&Student/Get/AllLocations`, {
-            headers: { Authorization: `Bearer ${token}` },
-          }),
-          fetch(`${API_BASE_URL}/api/IssueReport/Admin&Student/Get/AllIssueTypes`, {
-            headers: { Authorization: `Bearer ${token}` },
-          }),
-        ]);
+      const [locationsRes, issueTypesRes] = await Promise.all([
+        fetch(`${API_BASE_URL}/api/Location/Admin&Student/Get/AllLocations`, {
+          headers: { Authorization: `Bearer ${token}` },
+        }),
+        fetch(`${API_BASE_URL}/api/IssueReport/Admin&Student/Get/AllIssueTypes`, {
+          headers: { Authorization: `Bearer ${token}` },
+        }),
+      ]);
 
-        const locationsData = await locationsRes.json();
-        const issueTypesData = await issueTypesRes.json();
+      const locationsData = await locationsRes.json();
+      const issueTypesData = await issueTypesRes.json();
 
-        setLocations(locationsData.data || []);
-        setIssueTypes(issueTypesData.data || []);
-      } catch (err) {
-        console.error("Hiba az adatok betöltésekor:", err);
-        setError("Nem sikerült betölteni a legördülő listákat.");
-      }
-    };
+      setLocations(locationsData.data || []);
+      setIssueTypes(issueTypesData.data || []);
+    } catch (err) {
+      console.error("Hiba az adatok betöltésekor:", err);
+      // setError helyett toast
+      toast.error("Nem sikerült betölteni a legördülő listákat.");
+    }
+  };
 
     fetchData();
   }, [token]);
@@ -72,32 +73,32 @@ const CreateIssueReportForm: React.FC = () => {
     };
 
     try {
-      const response = await fetch(
-        `${API_BASE_URL}/api/IssueReport/Student/Create/IssueReport`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify(data),
-        }
-      );
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setMessage("Hibajelentés sikeresen létrehozva!");
-        setDescription("");
-        setLocationId("");
-        setIssueTypeId("");
-      } else {
-        setError(result.message || "Hiba történt a létrehozás során.");
+    const response = await fetch(
+      `${API_BASE_URL}/api/IssueReport/Student/Create/IssueReport`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(data),
       }
-    } catch (err) {
-      setError("Ismeretlen hiba történt.");
+    );
+
+    const result = await response.json();
+
+    if (response.ok) {
+      toast.success("Hibajelentés sikeresen létrehozva!");
+      setDescription("");
+      setLocationId("");
+      setIssueTypeId("");
+    } else {
+      toast.error(result.message || "Hiba történt a létrehozás során.");
     }
-  };
+  } catch (err) {
+    toast.error("Ismeretlen hiba történt.");
+  }
+};
 
   return (
     <form onSubmit={handleSubmit}>

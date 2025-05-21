@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 const ValidateStudentIssueReport: React.FC = () => {
   const [issueId, setIssueId] = useState("");
@@ -17,7 +18,7 @@ const ValidateStudentIssueReport: React.FC = () => {
       return;
     }
 
-    try {
+   try {
       const response = await fetch(
         `${API_BASE_URL}/api/IssueReport/Student/ValidateIssue/${issueId}`,
         {
@@ -31,15 +32,13 @@ const ValidateStudentIssueReport: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("A hibajelentés sikeresen érvényesítve lett.");
+        toast.success("A hibajelentés sikeresen érvényesítve lett.");
         setIssueId("");
       } else {
-        setError(
-          result.message || "Nem sikerült érvényesíteni a hibajelentést."
-        );
+        toast.error(result.message || "Nem sikerült érvényesíteni a hibajelentést.");
       }
     } catch (err) {
-      setError("Hálózati vagy egyéb hiba történt.");
+      toast.error("Hálózati vagy egyéb hiba történt.");
     }
   };
 

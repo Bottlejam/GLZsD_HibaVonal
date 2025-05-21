@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const DeleteEquipment: React.FC = () => {
   const [equipmentId, setEquipmentId] = useState<number | "">("");
@@ -20,7 +21,7 @@ const DeleteEquipment: React.FC = () => {
       return;
     }
 
-    try {
+     try {
       const response = await fetch(
         `${API_BASE_URL}/api/Equipment/Admin/Delete/Equipment/${equipmentId}`,
         {
@@ -35,18 +36,17 @@ const DeleteEquipment: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message || "Equipment sikeresen törölve.");
-        setError(null);
+        toast.success(result.message || "Equipment sikeresen törölve.");
         setEquipmentId("");
       } else {
-        setError(result.message || "Hiba történt az equipment törlésekor.");
-        setMessage(null);
+        toast.error(result.message || "Hiba történt az equipment törlésekor.");
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
-      setMessage(null);
+      toast.error("Hálózati hiba történt.");
     }
   };
+
+
 
   return (
     <div>

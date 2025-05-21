@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface OrderItem {
   equipmentId: number;
@@ -17,8 +18,9 @@ interface Order {
 }
 
 const TrackOrder: React.FC = () => {
-  const [order, setOrders] = useState<Order>();
+  const [order, setOrder] = useState<Order>();
   const [orderId, setOrderId] = useState<number>(0);
+   const [loading, setLoading] = useState(false);
   const token = localStorage.getItem("token");
   const orderStatusMap: { [key: number]: string } = {
     0: "Függőben",
@@ -28,6 +30,8 @@ const TrackOrder: React.FC = () => {
   };
 
   const handleOrder = async () => {
+    setLoading(true);
+    
     try {
       const response = await fetch(
         `${API_BASE_URL}/api/Order/Get/MaintenanceManager/OrderById/${orderId}`,
@@ -42,15 +46,19 @@ const TrackOrder: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setOrders(result.data);
-        console.log(result);
+        setOrder(result.data);
+        toast.success("Rendelés sikeresen lekérve.");
       } else {
-        alert("Hiba: " + result.message);
+        toast.error(result.message || "Hiba a rendelés lekérésekor.");
       }
     } catch (error) {
+      toast.error("Hálózati hiba történt.");
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
+
 
   return (
     <div>

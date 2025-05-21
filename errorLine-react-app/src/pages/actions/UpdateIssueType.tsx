@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 const UpdateIssueTypeForm: React.FC = () => {
   const [id, setId] = useState<number>(0);
@@ -34,12 +35,12 @@ const UpdateIssueTypeForm: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Hibatípus frissítve");
+        toast.success("Hibatípus frissítve");
       } else {
-        setError(result.message || "Hiba a frissítés során.");
+        toast.error(result.message || "Hiba a frissítés során.");
       }
-    } catch (err) {
-      setError("Ismeretlen hiba történt.");
+    } catch {
+      toast.error("Ismeretlen hiba történt.");
     }
   };
 

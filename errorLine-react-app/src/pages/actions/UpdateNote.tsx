@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 const UpdateNote: React.FC = () => {
   const [noteId, setNoteId] = useState<number | "">("");
@@ -22,7 +23,7 @@ const UpdateNote: React.FC = () => {
       return;
     }
 
-    try {
+   try {
       const response = await fetch(
         `${API_BASE_URL}/api/Note/Student/Update/Note/${noteId}`,
         {
@@ -38,20 +39,16 @@ const UpdateNote: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message || "Jegyzet sikeresen frissítve.");
-        setError(null);
+        toast.success(result.message || "Jegyzet sikeresen frissítve.");
         setNoteId("");
         setNewText("");
       } else {
-        setError(result.message || "Hiba történt a frissítés során.");
-        setMessage(null);
+        toast.error(result.message || "Hiba történt a frissítés során.");
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
-      setMessage(null);
+      toast.error("Hálózati hiba történt.");
     }
   };
-
   return (
     <div>
       <h2>Jegyzet frissítése</h2>

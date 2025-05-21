@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface NoteCreateDto {
   text: string;
@@ -32,7 +33,9 @@ const CreateNote: React.FC = () => {
       return;
     }
 
+ 
     try {
+      
       const response = await fetch(
         `${API_BASE_URL}/api/Note/Student/Create/Note/${issueId}`,
         {
@@ -48,14 +51,14 @@ const CreateNote: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message || "Jegyzet sikeresen létrehozva.");
+        toast.success(result.message || "Jegyzet sikeresen létrehozva.");
         setNoteText("");
         setIssueId("");
       } else {
-        setError(result.message || "Hiba történt a jegyzet létrehozásakor.");
+        toast.error(result.message || "Hiba történt a jegyzet létrehozásakor.");
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
+      toast.error("Hálózati hiba történt.");
     } finally {
       setLoading(false);
     }

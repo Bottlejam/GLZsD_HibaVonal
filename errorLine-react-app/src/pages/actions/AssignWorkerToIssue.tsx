@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface UserDto {
   id: number;
@@ -29,11 +30,14 @@ const AssignWorkerToIssue: React.FC = () => {
         const result = await response.json();
         if (response.ok) {
           setWorkers(result.data);
+        } else if (response.status === 401 || response.status === 403) {
+          // Jogosultság hiány esetén ne navigáljunk ki, csak toast
+          toast.error("Nincs jogosultság a karbantartók betöltéséhez.");
         } else {
-          setError("Nem sikerült betölteni a karbantartókat.");
+          toast.error("Nem sikerült betölteni a karbantartókat.");
         }
       } catch {
-        setError("Hálózati hiba történt.");
+        toast.error("Hálózati hiba történt.");
       }
     };
 

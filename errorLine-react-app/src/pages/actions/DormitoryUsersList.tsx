@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface DormUser {
   id: number;
   username: string;
   email: string;
+  role: string; 
 }
 
 const DormitoryUsersList: React.FC = () => {
@@ -14,7 +16,7 @@ const DormitoryUsersList: React.FC = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      try {
+       try {
         const response = await fetch(
           `${API_BASE_URL}/api/User/Admin/Get/AllUsersInDormitory`,
           {
@@ -27,18 +29,17 @@ const DormitoryUsersList: React.FC = () => {
         if (response.ok) {
           const result = await response.json();
           setUsers(result.data);
-          setError(null);
         } else if (response.status === 401 || response.status === 403) {
-          setError(
+          toast.error(
             "Nincs jogosultság vagy lejárt a token. Kérlek jelentkezz be újra."
           );
           setUsers([]);
         } else {
-          setError("Hiba történt a felhasználók lekérésekor.");
+          toast.error("Hiba történt a felhasználók lekérésekor.");
           setUsers([]);
         }
-      } catch (error) {
-        setError("Hálózati hiba történt.");
+      } catch {
+        toast.error("Hálózati hiba történt.");
         setUsers([]);
       }
     };
@@ -53,13 +54,13 @@ const DormitoryUsersList: React.FC = () => {
   return (
     <div>
       <h2>Kollégiumi felhasználók listája</h2>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            {user.username} - {user.email}
-          </li>
-        ))}
-      </ul>
+     <ul>
+  {users.map((user) => (
+    <li key={user.id}>
+      {user.username} - {user.email} - <em>{user.role}</em>
+    </li>
+  ))}
+</ul>
     </div>
   );
 };

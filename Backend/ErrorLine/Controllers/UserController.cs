@@ -1,9 +1,11 @@
-﻿using ErrorLine.Dtos;
+﻿using ErrorLine.Context;
+using ErrorLine.Dtos;
 using ErrorLine.Entities;
 using ErrorLine.Exceptions;
 using ErrorLine.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace ErrorLine.Controllers
@@ -14,10 +16,12 @@ namespace ErrorLine.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _UserService;
+        private readonly AppDbContext _context;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, AppDbContext context)
         {
             _UserService = userService;
+            _context = context;
         }
 
         [HttpPost("login")]
@@ -26,8 +30,19 @@ namespace ErrorLine.Controllers
         {
             try
             {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userDto.Email);
                 var token = await _UserService.LoginAsync(userDto);
-                return Ok(new ApiResponseDto<object>(200, "Login has been successful.", token));
+                var loginResponse = new LoginResponseDto
+                {
+                    Token = token,
+                    User = new UserDto
+                    {
+                        Id = user.Id,
+                        Username = user.Username,
+                        Role = user.Role
+                    }
+                };
+                return Ok(new ApiResponseDto<object>(200, "Login has been successful.", loginResponse));
             }
             catch (InvalidCredentialsException ex)
             {

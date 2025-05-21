@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 const MarkCompleted: React.FC = () => {
   const [issueId, setIssueId] = useState<number>(0);
@@ -13,7 +14,7 @@ const MarkCompleted: React.FC = () => {
     setMessage(null);
     setError(null);
 
-    try {
+  try {
       const response = await fetch(
         `${API_BASE_URL}/api/IssueReport/MaintenanceWorker/MarkIssueAsCompleted/${issueId}`,
         {
@@ -28,12 +29,12 @@ const MarkCompleted: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Hibabejelentés állapota átállítva.");
+        toast.success("Hibabejelentés állapota átállítva.");
       } else {
-        setError(result.message || "Hiba a frissítés során.");
+        toast.error(result.message || "Hiba a frissítés során.");
       }
     } catch (err) {
-      setError("Ismeretlen hiba történt.");
+      toast.error("Ismeretlen hiba történt.");
     }
   };
 

@@ -9,6 +9,7 @@ namespace ErrorLine.Dtos
         public DateTime CreatedAt { get; set; }
         public int IssueReportId { get; set; }
         public int CreatedById { get; set; }
+        
     }
     public class NoteCreateDto
     {

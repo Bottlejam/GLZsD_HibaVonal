@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API_BASE_URL from "./api";
+import toast from "react-hot-toast";
 
 const RegisterPage: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -18,25 +19,27 @@ const RegisterPage: React.FC = () => {
       dormitoryid,
     };
 
-    try {
-      const response = await fetch(`${API_BASE_URL}/api/User/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      });
+      try {
+    const response = await fetch(`${API_BASE_URL}/api/User/register`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userData),
+    });
 
-      if (response.ok) {
-        alert("Sikeres regisztráció!");
-      } else {
-        const error = await response.json();
-        alert("Hiba: " + error.message);
-      }
-    } catch (error) {
-      console.error(error);
+    if (response.ok) {
+      const data = await response.json();
+      localStorage.setItem("token", data.data);
+      toast.success("Sikeres regisztráció!");
+      navigate("/dashboard");
+    } else {
+      const error = await response.json();
+      toast.error("Hiba: " + error.message);
     }
-  };
+  } catch (error) {
+    toast.error("Hálózati hiba történt.");
+    console.error(error);
+  }
+};
 
   const handleToLogin = () => {
     navigate("/login");

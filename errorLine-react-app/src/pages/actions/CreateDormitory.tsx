@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface CreateDormitoryDto {
   name: string;
@@ -28,7 +29,7 @@ const CreateDormitory: React.FC = () => {
     setMessage(null);
     setError(null);
 
-    try {
+   try {
       const response = await fetch(
         `${API_BASE_URL}/api/Dormitory/SystemAdmin/Create/Dormitory`,
         {
@@ -44,13 +45,13 @@ const CreateDormitory: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message || "Kollégium sikeresen létrehozva.");
+        toast.success(result.message || "Kollégium sikeresen létrehozva.");
         setFormData({ name: "", address: "" });
       } else {
-        setError(result.message || "Hiba történt a kollégium létrehozásakor.");
+        toast.error(result.message || "Hiba történt a kollégium létrehozásakor.");
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
+      toast.error("Hálózati hiba történt.");
     } finally {
       setLoading(false);
     }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface Location {
   id: number;
@@ -26,9 +27,9 @@ const GetLocationById: React.FC = () => {
     setError(null);
     setLocation(null);
 
-    try {
+     try {
       const response = await fetch(
-        `${API_BASE_URL}/api/Location/Admin&Student/Get/LocationById/${locationId}`, // át kell írni a backendben az api végpontot
+        `${API_BASE_URL}/api/Location/Admin&Student/Get/LocationById/${locationId}`,
         {
           method: "GET",
           headers: {
@@ -49,13 +50,13 @@ const GetLocationById: React.FC = () => {
 
       const result = await response.json();
       setLocation(result.data);
+      toast.success("Helyszín sikeresen lekérve.");
     } catch (err: any) {
-      setError(err.message || "Ismeretlen hiba.");
+      toast.error(err.message || "Ismeretlen hiba.");
     } finally {
       setLoading(false);
     }
   };
-
   return (
     <div>
       <h2>Helyszín lekérdezése ID alapján</h2>

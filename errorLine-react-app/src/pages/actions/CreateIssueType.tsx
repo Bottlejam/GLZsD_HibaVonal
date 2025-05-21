@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface CreateIssueType {
   name: string;
@@ -39,18 +40,15 @@ const CreateIssueType: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Hibatípus sikeresen létrehozva!");
-        setIssueType({
-          name: "",
-        });
+        toast.success("Hibatípus sikeresen létrehozva!");
+        setIssueType({ name: "" });
       } else {
-        setError(result.message || "Hiba történt a létrehozás során.");
+        toast.error(result.message || "Hiba történt a létrehozás során.");
       }
     } catch (err: any) {
-      setError("Ismeretlen hiba történt.");
+      toast.error("Ismeretlen hiba történt.");
     }
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <h3>Hibatípus létrehozása</h3>

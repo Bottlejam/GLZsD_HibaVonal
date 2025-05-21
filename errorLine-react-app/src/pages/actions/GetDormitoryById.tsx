@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface Dormitory {
   id: number;
@@ -26,6 +27,7 @@ const GetDormitoryById: React.FC = () => {
     setLoading(true);
     setError(null);
 
+ 
     try {
       const response = await fetch(
         `${API_BASE_URL}/api/Dormitory/SystemAdmin/Get/DormitoryById/${dormitoryId}`,
@@ -42,12 +44,13 @@ const GetDormitoryById: React.FC = () => {
 
       if (response.ok) {
         setDormitory(result.data);
+        toast.success("Kollégium sikeresen lekérve.");
       } else {
-        setError(result.message || "Hiba történt a lekéréskor.");
+        toast.error(result.message || "Hiba történt a lekéréskor.");
         setDormitory(null);
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
+      toast.error("Hálózati hiba történt.");
       setDormitory(null);
     } finally {
       setLoading(false);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface OrderItem {
   equipmentId: number;
@@ -39,20 +40,23 @@ const GetAllOrders: React.FC = () => {
 
       if (!response.ok) {
         const errorText = await response.text();
-        alert("Hiba: " + errorText);
+        toast.error("Hiba: " + errorText);
         return;
       }
 
       const result = await response.json();
       setOrders(result.data);
+      // toast.success("Rendelések sikeresen lekérve."); // opcionális
     } catch (error) {
+      toast.error("Hiba a rendelések lekérésekor.");
       console.error("Hiba a rendelések lekérésekor:", error);
     }
   };
 
+
   useEffect(() => {
     handleOrder();
-  }, []);
+  }, [token]);
 
   return (
     <div>

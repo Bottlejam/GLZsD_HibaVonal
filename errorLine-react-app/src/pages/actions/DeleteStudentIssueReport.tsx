@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const DeleteStudentIssueReport: React.FC = () => {
   const [issueId, setIssueId] = useState("");
@@ -31,13 +32,13 @@ const DeleteStudentIssueReport: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("A hibajelentés sikeresen törölve lett.");
+        toast.success("A hibajelentés sikeresen törölve lett.");
         setIssueId("");
       } else {
-        setError(result.message || "Nem sikerült törölni a hibajelentést.");
+        toast.error(result.message || "Nem sikerült törölni a hibajelentést.");
       }
     } catch (err) {
-      setError("Hálózati vagy egyéb hiba történt.");
+      toast.error("Hálózati vagy egyéb hiba történt.");
     }
   };
 

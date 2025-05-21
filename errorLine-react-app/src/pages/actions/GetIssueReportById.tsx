@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface LocationDto {
   name: string;
@@ -26,6 +27,7 @@ const GetIssueReportById: React.FC = () => {
   const [issueReport, setIssueReport] = useState<IssueReportDto | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const token = localStorage.getItem("token");
 
@@ -38,6 +40,8 @@ const GetIssueReportById: React.FC = () => {
       setError("Kérlek, add meg a hibajelentés ID-ját!");
       return;
     }
+
+    setLoading(true);
 
     try {
       const response = await fetch(
@@ -53,15 +57,18 @@ const GetIssueReportById: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setIssueReport(result.data); // feltételezve, hogy a response ilyen formátumú
-        setMessage("Hibajelentés sikeresen lekérve.");
+        setIssueReport(result.data);
+        toast.success("Hibajelentés sikeresen lekérve.");
       } else {
-        setError(result.message || "Hiba történt a lekérés során.");
+        toast.error(result.message || "Hiba történt a lekérés során.");
       }
     } catch (err) {
-      setError("Ismeretlen hiba történt.");
+      toast.error("Ismeretlen hiba történt.");
+    } finally {
+      setLoading(false);
     }
   };
+
 
   return (
     <div>

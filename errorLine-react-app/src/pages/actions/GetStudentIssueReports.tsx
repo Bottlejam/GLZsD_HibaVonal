@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface IssueReportDto {
   id: number;
@@ -25,11 +26,14 @@ interface IssueReportDto {
 const GetStudentIssueReports: React.FC = () => {
   const [reports, setReports] = useState<IssueReportDto[]>([]);
   const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
   const token = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchReports = async () => {
-      try {
+      setLoading(true);
+      setError(null);
+     try {
         const response = await fetch(
           `${API_BASE_URL}/api/IssueReport/Student/Get/MyReports`,
           {
@@ -43,11 +47,16 @@ const GetStudentIssueReports: React.FC = () => {
 
         if (response.ok) {
           setReports(result.data);
+          toast.success("Jelentések sikeresen betöltve!");
         } else {
           setError(result.message || "Hiba történt a jelentések lekérésekor.");
+          toast.error(result.message || "Hiba történt a jelentések lekérésekor.");
         }
       } catch (err) {
         setError("Hálózati vagy egyéb hiba történt.");
+        toast.error("Hálózati vagy egyéb hiba történt.");
+      } finally {
+        setLoading(false);
       }
     };
 

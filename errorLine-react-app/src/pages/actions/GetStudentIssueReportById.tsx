@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface IssueReportDto {
   id: number;
@@ -45,11 +46,14 @@ const GetStudentIssueReportById: React.FC = () => {
 
       if (response.ok) {
         setIssue(result.data);
+        toast.success("Hibajelentés sikeresen lekérve!");
       } else {
         setError(result.message || "Nem található hibajelentés.");
+        toast.error(result.message || "Nem található hibajelentés.");
       }
     } catch (err) {
       setError("Hálózati vagy egyéb hiba történt.");
+      toast.error("Hálózati vagy egyéb hiba történt.");
     }
   };
 

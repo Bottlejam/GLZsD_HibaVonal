@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface Note {
   id: number;
@@ -35,11 +36,14 @@ const GetUserNotes: React.FC = () => {
 
       if (response.ok) {
         setNotes(result.data);
+        toast.success("Jegyzetek sikeresen betöltve!");
       } else {
         setError(result.message || "Hiba történt a jegyzetek lekérésekor.");
+        toast.error(result.message || "Hiba történt a jegyzetek lekérésekor.");
       }
     } catch {
       setError("Hálózati hiba történt.");
+      toast.error("Hálózati hiba történt.");
     } finally {
       setLoading(false);
     }

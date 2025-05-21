@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const DeleteMyNote: React.FC = () => {
   const [noteId, setNoteId] = useState<number | "">("");
@@ -20,7 +21,7 @@ const DeleteMyNote: React.FC = () => {
       return;
     }
 
-    try {
+   try {
       const response = await fetch(
         `${API_BASE_URL}/api/Note/Student/Delete/Note/${noteId}`,
         {
@@ -34,15 +35,13 @@ const DeleteMyNote: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message);
-        setError(null);
+        toast.success(result.message || "Jegyzet sikeresen törölve.");
+        setNoteId("");
       } else {
-        setError(result.message || "Hiba történt a jegyzet törlésekor.");
-        setMessage(null);
+        toast.error(result.message || "Hiba történt a jegyzet törlésekor.");
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
-      setMessage(null);
+      toast.error("Hálózati hiba történt.");
     }
   };
 

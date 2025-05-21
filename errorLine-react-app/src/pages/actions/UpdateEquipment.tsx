@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast, { Toaster } from "react-hot-toast";
 
 interface EquipmentUpdateDto {
   name: string;
@@ -50,7 +51,7 @@ const UpdateEquipment: React.FC = () => {
     setError(null);
     setMessage(null);
 
-    try {
+   try {
       const response = await fetch(
         `${API_BASE_URL}/api/Equipment/Admin/Update/Equipment/${equipmentId}`,
         {
@@ -66,12 +67,12 @@ const UpdateEquipment: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message || "Equipment sikeresen frissítve.");
+        toast.success(result.message || "Equipment sikeresen frissítve.");
       } else {
-        setError(result.message || "Hiba történt az equipment frissítésekor.");
+        toast.error(result.message || "Hiba történt az equipment frissítésekor.");
       }
-    } catch (err) {
-      setError("Hálózati hiba történt.");
+    } catch {
+      toast.error("Hálózati hiba történt.");
     } finally {
       setLoading(false);
     }

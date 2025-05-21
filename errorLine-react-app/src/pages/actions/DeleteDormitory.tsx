@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const DeleteDormitory: React.FC = () => {
   const [dormitoryId, setDormitoryId] = useState<number | "">("");
@@ -35,16 +36,13 @@ const DeleteDormitory: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message || "Kollégium sikeresen törölve.");
-        setError(null);
+        toast.success(result.message || "Kollégium sikeresen törölve.");
         setDormitoryId("");
       } else {
-        setError(result.message || "Hiba történt a kollégium törlésekor.");
-        setMessage(null);
+        toast.error(result.message || "Hiba történt a kollégium törlésekor.");
       }
     } catch (err) {
-      setError("Hálózati hiba történt.");
-      setMessage(null);
+      toast.error("Hálózati hiba történt.");
     }
   };
 

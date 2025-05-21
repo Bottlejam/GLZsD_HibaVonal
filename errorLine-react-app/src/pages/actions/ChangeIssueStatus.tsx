@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const ChangeIssueStatus: React.FC = () => {
-  const [issueId, setIssueId] = useState<number>(0);
+  const [issueId, setIssueId] = useState<number|"">("");
   const [statusName, setStatusName] = useState("Folyamatban");
   const [status, setStatus] = useState<number>(0);
   const [message, setMessage] = useState<string | null>(null);
@@ -37,8 +38,7 @@ const ChangeIssueStatus: React.FC = () => {
     e.preventDefault();
     setMessage(null);
     setError(null);
-
-    try {
+ try {
       const response = await fetch(
         `${API_BASE_URL}/api/IssueReport/MaintenanceManager/ChangeIssueStatus/${issueId}`,
         {
@@ -54,12 +54,14 @@ const ChangeIssueStatus: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Hibabejelentés állapota átállítva.");
+        toast.success("Hibabejelentés állapota átállítva.");
+        setIssueId("");
+        setStatusName("Folyamatban");
       } else {
-        setError(result.message || "Hiba a frissítés során.");
+        toast.error(result.message || "Hiba a frissítés során.");
       }
     } catch (err) {
-      setError("Ismeretlen hiba történt.");
+      toast.error("Ismeretlen hiba történt.");
     }
   };
 

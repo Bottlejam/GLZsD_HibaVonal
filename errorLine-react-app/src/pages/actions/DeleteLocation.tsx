@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const DeleteLocationForm: React.FC = () => {
   const [locationId, setLocationId] = useState<number>(0);
@@ -13,7 +14,7 @@ const DeleteLocationForm: React.FC = () => {
     setMessage(null);
     setError(null);
 
-    try {
+     try {
       const response = await fetch(
         `${API_BASE_URL}/api/Location/Admin/Delete/Location/${locationId}`,
         {
@@ -27,13 +28,13 @@ const DeleteLocationForm: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Helyszín sikeresen törölve.");
+        toast.success("Helyszín sikeresen törölve.");
         setLocationId(0);
       } else {
-        setError(result.message || "Hiba történt a törlés során.");
+        toast.error(result.message || "Hiba történt a törlés során.");
       }
     } catch (err) {
-      setError("Ismeretlen hiba történt.");
+      toast.error("Ismeretlen hiba történt.");
     }
   };
 

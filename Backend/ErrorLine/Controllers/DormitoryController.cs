@@ -18,7 +18,7 @@ namespace ErrorLine.Controllers
         {
             _DormitoryService = dormitaryService;
         }
-        [HttpGet("SystemAdmin/Get/AllDormitorories")]
+        [HttpGet("SystemAdmin/Get/AllDormitories")]
         public async Task<IActionResult> GetAllDormitories()
         {
             try
@@ -72,6 +72,7 @@ namespace ErrorLine.Controllers
         [HttpDelete("SystemAdmin/Delete/Dormitory/{id}")]
         public async Task<IActionResult> DeleteDormitory(int id)
         {
+            Console.WriteLine($"Törlés kérése: {id}");
             try
             {
                 
@@ -89,7 +90,7 @@ namespace ErrorLine.Controllers
 
 
         }
-        [HttpPut("SystemAdmin/Update/Location/{id}")]
+        [HttpPut("SystemAdmin/Update/Dormitory/{id}")]
         public async Task<IActionResult> UpdateDomritory(int id, [FromBody] UpdateDormitoryDto dto)
         {
             try

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 const ChangeIssueDescription: React.FC = () => {
   const [issueId, setIssueId] = useState("");
@@ -18,7 +19,7 @@ const ChangeIssueDescription: React.FC = () => {
       return;
     }
 
-    try {
+   try {
       const response = await fetch(
         `${API_BASE_URL}/api/IssueReport/Student/Change/Description/${issueId}`,
         {
@@ -34,14 +35,14 @@ const ChangeIssueDescription: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Leírás sikeresen módosítva.");
+        toast.success("Leírás sikeresen módosítva.");
         setIssueId("");
         setNewDescription("");
       } else {
-        setError(result.message || "Nem sikerült a leírás módosítása.");
+        toast.error(result.message || "Nem sikerült a leírás módosítása.");
       }
     } catch (err) {
-      setError("Hálózati vagy szerverhiba történt.");
+      toast.error("Hálózati vagy szerverhiba történt.");
     }
   };
 

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
+import toast from "react-hot-toast";
 
 interface Location {
   id: number;
   name: string;
   description: string;
+  locationType: number;
   dormitoryId: number;
 }
 
@@ -13,10 +15,21 @@ const GetAllLocations: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  const [editLocation, setEditLocation] = useState<Location | null>(null);
+  const [newName, setNewName] = useState<string>("");
+  const [newDescription, setNewDescription] = useState<string>("");
+  const [newLocationType, setNewLocationType] = useState<number>(0);
+
+  const locationTypes: { [key: number]: string } = {
+    0: "CommonPlace",
+    1: "Room",
+  };
+
   const token = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchLocations = async () => {
+      setLoading(true);
       try {
         const response = await fetch(
           `${API_BASE_URL}/api/Location/Admin&Student/Get/AllLocations`,
@@ -33,16 +46,91 @@ const GetAllLocations: React.FC = () => {
         }
 
         const result = await response.json();
-        setLocations(result.data); // result.data = location lista
+        setLocations(result.data);
+        toast.success("Helyszínek sikeresen betöltve!");
+        setError(null);
       } catch (err: any) {
-        setError(err.message);
+        const message = err.message || "Ismeretlen hiba történt.";
+        toast.error(message);
+        setError(message);
       } finally {
         setLoading(false);
       }
     };
+    if (token) {
+      fetchLocations();
+    } else {
+      toast.error("Nincs bejelentkezve.");
+      setLoading(false);
+    }
+  }, [token]);
 
-    fetchLocations();
-  }, []);
+  // Törlés
+  const handleDelete = async (id: number) => {
+    if (!token) return;
+    if (!window.confirm("Biztosan törölni szeretnéd?")) return;
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/Location/Admin/Delete/Location/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) throw new Error("Nem sikerült törölni a helyszínt.");
+
+      setLocations((prev) => prev.filter((loc) => loc.id !== id));
+      toast.success("Helyszín törölve!");
+    } catch (err: any) {
+      toast.error(err.message || "Ismeretlen hiba történt.");
+    }
+  };
+
+  // Módosítási ablak megnyitása
+  const openEditModal = (loc: Location) => {
+    setEditLocation(loc);
+    setNewName(loc.name);
+    setNewDescription(loc.description);
+    setNewLocationType(loc.locationType);
+  };
+
+  // Módosítás mentése
+const handleSaveEdit = async () => {
+  if (!editLocation || !token) return;
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/Location/Admin/Update/Location/${editLocation.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        name: newName,
+        locationType: newLocationType,
+      }),
+    });
+
+    if (!response.ok) throw new Error("Nem sikerült frissíteni a helyszínt.");
+
+    setLocations((prev) =>
+      prev.map((loc) =>
+        loc.id === editLocation.id
+          ? { ...loc, name: newName, locationType: newLocationType }
+          : loc
+      )
+    );
+
+    toast.success("Helyszín sikeresen frissítve.");
+    setEditLocation(null);
+  } catch (err: any) {
+    toast.error(err.message || "Ismeretlen hiba történt.");
+  }
+};
+  const closeEditModal = () => {
+    setEditLocation(null);
+  };
 
   if (loading) return <p>Betöltés...</p>;
   if (error) return <p style={{ color: "red" }}>{error}</p>;
@@ -53,10 +141,71 @@ const GetAllLocations: React.FC = () => {
       <ul>
         {locations.map((loc) => (
           <li key={loc.id}>
-            <strong>{loc.name}</strong> {loc.description}
+            <strong>
+              ID: {loc.id} - {loc.name}
+            </strong>{" "}
+            — {loc.description} — Típus: {locationTypes[loc.locationType] || "Ismeretlen"}
+            <button onClick={() => handleDelete(loc.id)} style={{ marginLeft: 10 }}>
+              Törlés
+            </button>
+            <button onClick={() => openEditModal(loc)} style={{ marginLeft: 10 }}>
+              Módosítás
+            </button>
           </li>
         ))}
       </ul>
+
+      {editLocation && (
+  <div
+    style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: "rgba(0,0,0,0.5)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: 1000,
+    }}
+  >
+    <div
+      style={{
+        backgroundColor: "white",
+        padding: 20,
+        borderRadius: 8,
+        minWidth: 300,
+      }}
+    >
+      <h3>Helyszín módosítása</h3>
+      <label>
+        Név:
+        <br />
+        <input value={newName} onChange={(e) => setNewName(e.target.value)} />
+      </label>
+      <br />
+      {/* LEÍRÁS mező törölve */}
+      <label>
+        Típus:
+        <br />
+        <select
+          value={newLocationType}
+          onChange={(e) => setNewLocationType(Number(e.target.value))}
+        >
+          <option value={0}>CommonPlace</option>
+          <option value={1}>Room</option>
+        </select>
+      </label>
+      <br />
+      <br />
+      <button onClick={handleSaveEdit}>Mentés</button>
+      <button onClick={closeEditModal} style={{ marginLeft: 10 }}>
+        Mégse
+      </button>
+    </div>
+  </div>
+)}
     </div>
   );
 };
