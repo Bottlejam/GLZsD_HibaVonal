@@ -128,7 +128,7 @@ const GetAllEquipments: React.FC = () => {
   if (loading) return <div>Betöltés...</div>;
 
   return (
- <div style={{ maxWidth: 700, marginLeft: 0, marginRight: "auto" }}>
+ <div style={{ maxWidth: 800, marginLeft: 0, marginRight: "auto" }}>
       <h2>Eszközök listája</h2>
       <ul style={{ padding: 0 }}>
         {equipments.map((equipment) => (
@@ -145,7 +145,7 @@ const GetAllEquipments: React.FC = () => {
             }}
           >
             <div>
-  <strong>{equipment.name} (ID: {equipment.id})</strong> — {equipment.stock} db — {equipment.price} Ft — Helyszín:{" "}
+  <strong>Név: {equipment.name} (ID: {equipment.id})</strong> — Darabszám: {equipment.stock} db — Egységár: {equipment.price} Ft — Helyszín:{" "}
   {equipment.location.name} (ID: {equipment.location.id})
 </div>
             <div>

@@ -30,4 +30,10 @@
         {
         }
     }
+    public class ChangeOrderStatusToSameException : BaseApiException
+    {
+        public ChangeOrderStatusToSameException() : base(400, "The order is in this state already.")
+        {
+        }
+    }
 }

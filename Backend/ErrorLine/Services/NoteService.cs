@@ -80,7 +80,7 @@ namespace ErrorLine.Services
         {
             var user = await _context.Users.FindAsync(userid);
 
-            var notes = await _context.Notes.Include(n => n.IssueReport)
+            var notes = await _context.Notes.Include(n => n.IssueReport).Include(i=>i.CreatedBy)
                 .Where(n=>n.IssueReport.DormitoryId==user.DormitoryId)
          
          .ToListAsync();

@@ -191,6 +191,35 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
-
+        [HttpGet("MaintenanceManager/Get/AllStudentsInDormitory")]
+        [Authorize(Roles = "MaintenanceManager")]
+        public async Task<IActionResult> GetStudentsInDormitory()
+        {
+            try
+            {
+                var userId = int.Parse(User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value);
+                var users = await _UserService.GetStudentsInDormitoryAsync(userId);
+                return Ok(new ApiResponseDto<object>(200, "Maintenance workers has been listed succesfully in your dormitory.", users));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
+            }
+        }
+        [HttpGet("MaintenanceManager/Get/AllMaintenanceStaffInDormitory")]
+        [Authorize(Roles = "MaintenanceManager")]
+        public async Task<IActionResult> GetMaintenanceStaffInDormitory()
+        {
+            try
+            {
+                var userId = int.Parse(User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value);
+                var users = await _UserService.GetMaintenanceStaffInDormitoryAsync(userId);
+                return Ok(new ApiResponseDto<object>(200, "Maintenance workers has been listed succesfully in your dormitory.", users));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
+            }
+        }
     }
 }

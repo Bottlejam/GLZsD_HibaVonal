@@ -1,19 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
 import toast from "react-hot-toast";
 
-interface NoteCreateDto {
-  text: string;
+interface IssueReportDto {
+  id: number;
+  date: Date;
+  description: string;
+  issueStatus: number;
 }
 
 const CreateNote: React.FC = () => {
-  const [issueId, setIssueId] = useState<number | "">("");
+  const [issueId, setIssueId] = useState<number>(0);
   const [noteText, setNoteText] = useState<string>("");
+  const [reports, setReports] = useState<IssueReportDto[]>([]);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [reportsRes] = await Promise.all([
+          fetch(`${API_BASE_URL}/api/IssueReport/Student/Get/MyReports`, {
+            headers: { Authorization: `Bearer ${token}` },
+          }),
+        ]);
+
+        const reportsData = await reportsRes.json();
+
+        setReports(reportsData.data || []);
+      } catch (err) {
+        console.error("Hiba az adatok betöltésekor:", err);
+        // setError helyett toast
+        toast.error("Nem sikerült betölteni a legördülő listákat.");
+      }
+    };
+
+    fetchData();
+  }, [token]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,9 +59,7 @@ const CreateNote: React.FC = () => {
       return;
     }
 
- 
     try {
-      
       const response = await fetch(
         `${API_BASE_URL}/api/Note/Student/Create/Note/${issueId}`,
         {
@@ -53,9 +77,11 @@ const CreateNote: React.FC = () => {
       if (response.ok) {
         toast.success(result.message || "Jegyzet sikeresen létrehozva.");
         setNoteText("");
-        setIssueId("");
+        setIssueId(0);
       } else {
-        toast.error(result.message || "Hiba történt a jegyzet létrehozásakor.");
+        toast.error(
+          result?.message ?? "Hiba történt a jegyzet létrehozásakor."
+        );
       }
     } catch (err) {
       toast.error("Hálózati hiba történt.");
@@ -69,14 +95,21 @@ const CreateNote: React.FC = () => {
       <h2>Új jegyzet létrehozása hibaügyhöz</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Hiba ID:</label>
-          <input
-            type="number"
-            min={1}
+          <select
             value={issueId}
             onChange={(e) => setIssueId(Number(e.target.value))}
             required
-          />
+          >
+            <option value="">-- Válassz hibabejelentést --</option>
+            {reports
+              .filter((rep) => rep.issueStatus === 2)
+              .map((rep) => (
+                <option key={rep.id} value={rep.id}>
+                  {rep.description} ({rep.id}) -{" "}
+                  {new Date(rep.date).toLocaleString("hu-HU")}
+                </option>
+              ))}
+          </select>
         </div>
         <div>
           <label>Jegyzet szövege:</label>

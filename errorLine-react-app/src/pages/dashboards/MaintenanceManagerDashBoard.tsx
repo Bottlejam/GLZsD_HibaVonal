@@ -28,15 +28,15 @@ const MaintenanceManagerDashBoard: React.FC = () => {
       <p>IssueReports</p>
       
       <GetAllIssueReports />
-      <GetIssueReportById />
-      <AssignWorkerToIssue />
-      <ChangeIssueStatus />
+      
+     
+      
      
       
       <p>Notes</p>
       <GetAllNotes />
-      <GetNoteById />
-       <DeleteAnyNote />
+     
+
   
       
       
@@ -46,9 +46,9 @@ const MaintenanceManagerDashBoard: React.FC = () => {
 
       <p>Order</p>
       <CreateOrderForm />
-      <TrackOrder />
+     
       <GetAllOrders />
-      <CancelOrder />
+      
      
     </div>);
 };

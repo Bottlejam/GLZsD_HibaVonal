@@ -6,7 +6,7 @@ namespace ErrorLine.Dtos
     public class OrderDto
     {
         public int Id { get; set; }
-        public int? UserId { get; set; }
+        public UserDto User { get; set; }
         public IEnumerable<OrderItemDto> OrderItems { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public DateTime CreatedAt { get; set; }

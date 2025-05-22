@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
 import API_BASE_URL from "../api";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 interface Note {
   id: number;
   text: string;
-  createdAt: string;
   issueReportId: number;
+  createdAt: string;
 }
 
 const GetUserNotes: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [editingNoteId, setEditingNoteId] = useState<number | null>(null);
+  const [editedText, setEditedText] = useState<string>("");
 
   const token = localStorage.getItem("token");
 
@@ -32,7 +34,6 @@ const GetUserNotes: React.FC = () => {
       );
 
       const result = await response.json();
-      console.log("Jegyzetek API válasz:", result);
 
       if (response.ok) {
         setNotes(result.data);
@@ -53,6 +54,67 @@ const GetUserNotes: React.FC = () => {
     fetchNotes();
   }, []);
 
+  const handleDelete = async (id: number) => {
+    try {
+      const response = await fetch(
+        `${API_BASE_URL}/api/Note/Student/Delete/Note/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success(result.message || "Jegyzet törölve.");
+        setNotes((prev) => prev.filter((n) => n.id !== id));
+      } else {
+        toast.error(result.message || "Nem sikerült törölni a jegyzetet.");
+      }
+    } catch {
+      toast.error("Hálózati hiba törlés közben.");
+    }
+  };
+
+  const handleEdit = (note: Note) => {
+    setEditingNoteId(note.id);
+    setEditedText(note.text);
+  };
+
+  const handleUpdate = async (id: number) => {
+    try {
+      const response = await fetch(
+        `${API_BASE_URL}/api/Note/Student/Update/Note/${id}`,
+        {
+          method: "PATCH",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ text: editedText }),
+        }
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success(result.message || "Jegyzet frissítve.");
+        setNotes((prev) =>
+          prev.map((n) => (n.id === id ? { ...n, text: editedText } : n))
+        );
+        setEditingNoteId(null);
+        setEditedText("");
+      } else {
+        toast.error(result.message || "Nem sikerült frissíteni a jegyzetet.");
+      }
+    } catch {
+      toast.error("Hálózati hiba frissítés közben.");
+    }
+  };
+
   return (
     <div>
       <h2>Saját jegyzeteim</h2>
@@ -66,7 +128,15 @@ const GetUserNotes: React.FC = () => {
                 <strong>ID:</strong> {note.id}
               </p>
               <p>
-                <strong>Szöveg:</strong> {note.text}
+                <strong>Szöveg:</strong>{" "}
+                {editingNoteId === note.id ? (
+                  <textarea
+                    value={editedText}
+                    onChange={(e) => setEditedText(e.target.value)}
+                  />
+                ) : (
+                  note.text
+                )}
               </p>
               <p>
                 <strong>Létrehozva:</strong>{" "}
@@ -75,6 +145,18 @@ const GetUserNotes: React.FC = () => {
               <p>
                 <strong>Hiba ID:</strong> {note.issueReportId}
               </p>
+
+              {editingNoteId === note.id ? (
+                <>
+                  <button onClick={() => handleUpdate(note.id)}>Mentés</button>
+                  <button onClick={() => setEditingNoteId(null)}>Mégse</button>
+                </>
+              ) : (
+                <>
+                  <button onClick={() => handleEdit(note)}>Módosítás</button>
+                  <button onClick={() => handleDelete(note.id)}>Törlés</button>
+                </>
+              )}
               <hr />
             </li>
           ))}

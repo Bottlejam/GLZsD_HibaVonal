@@ -13,6 +13,7 @@ namespace ErrorLine.Services
         Task<OrderDto> TrackOrderAsync(int orderId, int u);
         Task<IEnumerable<OrderDto>> GetAllOrdersAsync(int userId);
         Task CancelOrderAsync(int orderId, int userId);
+        Task ChangeOrderStatusAsync(int orderId, OrderStatus status);
     }
     public class OrderService:IOrderService
     {
@@ -92,6 +93,7 @@ namespace ErrorLine.Services
                 .Include(o => o.OrderItems)
                     .ThenInclude(i => i.Equipment)
                 .Include(o => o.Dormitory)
+                .Include(u=>u.User)
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<OrderDto>>(orders);
@@ -109,7 +111,7 @@ namespace ErrorLine.Services
                 throw new OrderNotInSameDormitaryAsYouException();
             }
 
-            if (order.OrderStatus != OrderStatus.Pending)
+            if (order.OrderStatus != OrderStatus.Pending )
             {
                 throw new OrderStatusIsNotPendingException();
             }
@@ -118,6 +120,24 @@ namespace ErrorLine.Services
             order.OrderStatus = OrderStatus.Cancelled;
             await _context.SaveChangesAsync();
            
+        }
+        public async Task ChangeOrderStatusAsync(int orderId, OrderStatus status)
+        {
+            var order = await _context.Orders.FindAsync(orderId);
+            if (order == null)
+            {
+                throw new OrderNotFoundException();
+            }
+
+            if (order.OrderStatus == status)
+            {
+                throw new ChangeOrderStatusToSameException();
+            }
+            
+         
+            order.OrderStatus = status;
+            await _context.SaveChangesAsync();
+
         }
 
 

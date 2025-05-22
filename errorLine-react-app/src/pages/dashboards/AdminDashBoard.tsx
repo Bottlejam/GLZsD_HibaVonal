@@ -37,25 +37,25 @@ const AdminDashboard: React.FC = () => {
       
       <p>Equipment</p>
       <CreateEquipment />
-      <DeleteEquipment />
+      
       <GetAllEquipments />
-      <GetEquipmentById />
-      <UpdateEquipment />
+      
+    
   
       
       
        <p>Issue Types</p>
       <CreateIssueType />
-      <DeleteIssueType />
+     
       <GetAllIssueTypes />
-      <UpdateIssueTypeForm />
+     
 
         <p>Locaction</p>
        <CreateLocationForm />
-      <DeleteLocationForm />
+      
       <GetAllLocations />
-      <GetLocationById />
-      <UpdateLocationForm />
+    
+      
      
     </div>);
 };

@@ -24,7 +24,7 @@ const CreateEquipment: React.FC = () => {
 
   const [locations, setLocations] = useState<Location[]>([]);
   const [filteredLocations, setFilteredLocations] = useState<Location[]>([]);
-  const [locationInput, setLocationInput] = useState(""); // a szöveg, amit a user beír
+  const [locationInput, setLocationInput] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
 
   const [message, setMessage] = useState<string | null>(null);
@@ -34,28 +34,23 @@ const CreateEquipment: React.FC = () => {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    // Helyszínek betöltése az API-ról
     const fetchLocations = async () => {
-      
-   try {
-    const res = await fetch(`${API_BASE_URL}/api/Location/Admin&Student/Get/AllLocations`, {
-      headers: {
-        Authorization: token ? `Bearer ${token}` : "",
-      },
-    });
+      try {
+        const res = await fetch(
+          `${API_BASE_URL}/api/Location/Admin&Student/Get/AllLocations`,
+          {
+            headers: {
+              Authorization: token ? `Bearer ${token}` : "",
+            },
+          }
+        );
 
-    const result = await res.json();
-    console.log("Kapott válasz:", result); // <- EZT tedd bele!
-
-    // Most nézd meg itt, hogyan néz ki:
-    // Ha pl. { data: [ ...helyszínek... ] } akkor így használd:
-    setLocations(result.data);
-    setFilteredLocations(result.data);
-
-  } catch (err) {
-    toast.error("Hiba a helyszínek betöltésekor");
-  }
-      
+        const result = await res.json();
+        setLocations(result.data);
+        setFilteredLocations(result.data);
+      } catch (err) {
+        toast.error("Hiba a helyszínek betöltésekor");
+      }
     };
 
     fetchLocations();
@@ -68,7 +63,6 @@ const CreateEquipment: React.FC = () => {
       setLocationInput(value);
       setShowDropdown(true);
 
-      // Szűrés kis/nagybetűre érzéketlenül
       const filtered = locations.filter((loc) =>
         loc.name.toLowerCase().includes(value.toLowerCase())
       );
@@ -140,27 +134,40 @@ const CreateEquipment: React.FC = () => {
   };
 
   return (
-   <div style={{ maxWidth: 400, marginLeft: 0, marginRight: "auto" }}>
+    <div style={{ maxWidth: 400, marginLeft: 0, marginRight: "auto" }}>
       <h2>Új eszköz létrehozása</h2>
       <form onSubmit={handleSubmit} autoComplete="off">
-        <label>Név:</label>
+        {/* Név */}
+        <label htmlFor="name">Név:</label>
         <input
           type="text"
+          id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
           required
+          style={{ marginBottom: 15, width: "100%", padding: 8, fontSize: 16 }}
         />
 
-        <label>Készlet:</label>
-        <div style={{ position: "relative", display: "inline-block" }}>
+        {/* Készlet */}
+        <label htmlFor="stock">Készlet:</label>
+        <div style={{ position: "relative", marginBottom: 15 }}>
           <input
             type="number"
+            id="stock"
             name="stock"
             value={formData.stock}
             onChange={handleChange}
             required
-            style={{ paddingRight: "30px" }}
+            style={{
+              paddingRight: 50,
+              paddingLeft: 8,
+              paddingTop: 8,
+              paddingBottom: 8,
+              fontSize: 16,
+              width: "100%",
+              boxSizing: "border-box",
+            }}
           />
           <span
             style={{
@@ -177,15 +184,25 @@ const CreateEquipment: React.FC = () => {
           </span>
         </div>
 
-        <label>Ár:</label>
-        <div style={{ position: "relative", display: "inline-block" }}>
+        {/* Ár */}
+        <label htmlFor="price">Ár:</label>
+        <div style={{ position: "relative", marginBottom: 15 }}>
           <input
             type="number"
+            id="price"
             name="price"
             value={formData.price}
             onChange={handleChange}
             required
-            style={{ paddingRight: "30px" }}
+            style={{
+              paddingRight: 50,
+              paddingLeft: 8,
+              paddingTop: 8,
+              paddingBottom: 8,
+              fontSize: 16,
+              width: "100%",
+              boxSizing: "border-box",
+            }}
           />
           <span
             style={{
@@ -202,18 +219,21 @@ const CreateEquipment: React.FC = () => {
           </span>
         </div>
 
-        <label>Helyszín:</label>
-        <div style={{ position: "relative" }}>
+        {/* Helyszín */}
+        <label htmlFor="locationInput">Helyszín:</label>
+        <div style={{ position: "relative", marginBottom: 20 }}>
           <input
             type="text"
+            id="locationInput"
             name="locationInput"
             value={locationInput}
             onChange={handleChange}
             onFocus={() => setShowDropdown(true)}
-            onBlur={() => setTimeout(() => setShowDropdown(false), 150)} // kicsit később zárja, hogy kattintani lehessen
+            onBlur={() => setTimeout(() => setShowDropdown(false), 150)}
             placeholder="Keresés helyszínre..."
             required
             autoComplete="off"
+            style={{ width: "100%", padding: 8, fontSize: 16, boxSizing: "border-box" }}
           />
           {showDropdown && filteredLocations.length > 0 && (
             <ul
@@ -233,10 +253,11 @@ const CreateEquipment: React.FC = () => {
               {filteredLocations.map((loc) => (
                 <li
                   key={loc.id}
-                  onMouseDown={() => handleSelectLocation(loc)} // onMouseDown, mert onClick elvész onBlur miatt
+                  onMouseDown={() => handleSelectLocation(loc)}
                   style={{
                     padding: "5px 10px",
                     cursor: "pointer",
+                    borderBottom: "1px solid #ddd",
                   }}
                 >
                   {loc.name}
@@ -246,7 +267,16 @@ const CreateEquipment: React.FC = () => {
           )}
         </div>
 
-        <button type="submit" disabled={loading}>
+        <button
+          type="submit"
+          disabled={loading}
+          style={{
+            width: "100%",
+            padding: 10,
+            fontSize: 16,
+            cursor: loading ? "not-allowed" : "pointer",
+          }}
+        >
           {loading ? "Mentés..." : "Létrehozás"}
         </button>
       </form>

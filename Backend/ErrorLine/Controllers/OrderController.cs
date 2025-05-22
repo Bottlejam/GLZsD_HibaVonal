@@ -108,5 +108,30 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "MaintenanceManager")]
+        [HttpPatch("MaintenanceManager/ChangeOrderStatus/{issueId}")]
+        public async Task<IActionResult> ChangeIssueStatus(int issueId, [FromBody] OrderStatus status)
+        {
+            try
+            {
+                
+                await _OrderService.ChangeOrderStatusAsync(issueId, status);
+                return Ok(new ApiResponseDto<object>(200, "The issue's status has been changed succesfully"));
+            }
+            catch (OrderNotFoundException ex)
+            {
+                return NotFound(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
+            }
+            catch (ChangeOrderStatusToSameException ex)
+            {
+                return BadRequest(new ApiResponseDto<object>(ex.StatusCode, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured"));
+            }
+
+
+        }
     }
 }

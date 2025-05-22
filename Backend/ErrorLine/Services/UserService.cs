@@ -23,6 +23,8 @@ namespace ErrorLine.Services
         Task<UserDto> RegisterAdminAsync(AdminUserRegisterDto userDto);
         Task<UserDto> RegisterSystemAdminAsync(SystemAdminUserRegisterDto userDto);
         Task<IEnumerable<UserDto>> GetMaintenanceWorkersInDormitoryAsync(int userId);
+        Task<IEnumerable<UserDto>> GetStudentsInDormitoryAsync(int userId);
+        Task<IEnumerable<UserDto>> GetMaintenanceStaffInDormitoryAsync(int userId);
     }
     public class UserService:IUserService
     {
@@ -195,6 +197,28 @@ namespace ErrorLine.Services
             var user = await _context.Users.FindAsync(userId);
             var users = await _context.Users
                 .Where(u => u.DormitoryId == user.DormitoryId && u.Role==UserRole.MaintenanceWorker)
+                .Include(o => o.Dormitory)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<UserDto>>(users);
+
+        }
+        public async Task<IEnumerable<UserDto>> GetStudentsInDormitoryAsync(int userId)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            var users = await _context.Users
+                .Where(u => u.DormitoryId == user.DormitoryId && u.Role == UserRole.Student)
+                .Include(o => o.Dormitory)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<UserDto>>(users);
+
+        }
+        public async Task<IEnumerable<UserDto>> GetMaintenanceStaffInDormitoryAsync(int userId)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            var users = await _context.Users
+                .Where(u => u.DormitoryId == user.DormitoryId && u.Role == UserRole.MaintenanceWorker || u.Role== UserRole.MaintenanceManager)
                 .Include(o => o.Dormitory)
                 .ToListAsync();
 

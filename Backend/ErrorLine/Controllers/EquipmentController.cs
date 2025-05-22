@@ -10,7 +10,7 @@ namespace ErrorLine.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")]
+    
     public class EquipmentController : ControllerBase
     {
         private readonly IEquipmentService _EquipmentService;
@@ -19,7 +19,7 @@ namespace ErrorLine.Controllers
         {
             _EquipmentService = EqupmentService;
         }
-
+        [Authorize(Roles = "Admin,MaintenanceManager,MaintenanceWorker")]
         [HttpGet("Admin/Get/AllEquipments")]
         public async Task<IActionResult> GetAllEquipments()
         {
@@ -34,6 +34,7 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet("Admin/Get/EquipmentById/{id}")]
         public async Task<IActionResult> GetEquipmentByid(int id)
         {
@@ -52,6 +53,7 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost("Admin/Create/Equipment")]
         public async Task<IActionResult> CreateEquipment([FromBody] EquipmentCreateDto dto)
         {
@@ -74,6 +76,7 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpDelete("Admin/Delete/Equipment/{id}")]
         public async Task<IActionResult> DeleteEquipment(int id)
         {
@@ -96,6 +99,7 @@ namespace ErrorLine.Controllers
                 return BadRequest(new ApiResponseDto<object>(500, "Unexpected error occured."));
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPut("Admin/Update/Equipment/{id}")]
         public async Task<IActionResult> UpdateEquipment(int id, [FromBody] EquipmentUpdateDto EquipmentDto)
         {

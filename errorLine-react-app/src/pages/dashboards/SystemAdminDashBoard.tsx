@@ -31,10 +31,10 @@ const SystemAdminDashBoard: React.FC = () => {
       
       <p>Dormitory</p>
       <CreateDormitory />
-      <DeleteDormitory />
+ 
       <GetAllDormitories />
-      <GetDormitoryById />
-      <UpdateDormitory />
+    
+      
      
     </div>
   );
